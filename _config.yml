@@ -22,3 +22,4 @@ exclude:
   - HANDOFF.md
   - CLAUDE.md
   - README.md
+  - changelog.md

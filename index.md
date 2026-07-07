@@ -33,4 +33,3 @@ Pick your track:
 - [Restricted Data]({{ '/restricted-data' | relative_url }})
 - [Elsewhere]({{ '/elsewhere' | relative_url }})
 - [Talks]({{ '/talks/nber-hf-2026' | relative_url }})
-- [Changelog]({{ '/changelog' | relative_url }})

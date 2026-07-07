@@ -49,8 +49,16 @@ Adapted from paulgp.github.io. Key files:
 Pin versions in Gemfile. Always commit `Gemfile.lock`.
 Use `bundle config set --local path vendor/bundle` to keep gems repo-local.
 
+## Excluded from the site (but tracked in git)
+
+These files are in the repo but excluded from Jekyll processing via `_config.yml`:
+- `changelog.md` — change log, repo-only (not a public page)
+- `docs/` — contains PLAN.md (Paul's spec)
+- `HANDOFF.md`, `CLAUDE.md`, `README.md`
+
 ## Key files
 
 - `docs/PLAN.md` — Paul's canonical spec (do not edit)
 - `HANDOFF.md` — decision log and current state
 - `CLAUDE.md` — this file; how to work in the repo
+- `changelog.md` — change log (git-only, not rendered on the site)
