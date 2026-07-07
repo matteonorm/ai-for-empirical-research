@@ -139,8 +139,10 @@ bundle exec jekyll serve
 | `_data/videos.yml` | Stubbed with TODO placeholders |
 | `_data/elsewhere.yml` | Stubbed with TODO placeholders |
 | `index.md` | Stubbed with nav links |
-| `start-here/*.md` (3 files) | Stubbed |
-| `pipeline/*.md` (7 files) | Stubbed with video_key front matter |
+| `start-here/index.md` | Stubbed (landing page with track picker) |
+| `start-here/*.md` (3 track files) | Stubbed |
+| `pipeline/index.md` | Stubbed (landing page listing all 7 stages) |
+| `pipeline/*.md` (7 stage files) | Stubbed with video_key front matter |
 | `restricted-data.md` | Stubbed |
 | `skills/index.md` | Stubbed |
 | `elsewhere.md` | Stubbed |
