@@ -64,6 +64,15 @@ They must NOT be re-published or re-linked from any site page.
 - `CLAUDE.md` — this file; how to work in the repo
 - `changelog.md` — internal change log (repo-only, not on the site)
 
+## Monthly review reminder
+
+A scheduled GitHub Actions workflow (`.github/workflows/monthly-reminder.yml`)
+opens a new issue on the 1st of each month with a review checklist: re-run
+getting-started path, verify video links/timestamps, note model/tool version
+changes, update `changelog.md`, confirm the site deploys. Uses the built-in
+`GITHUB_TOKEN` — no secrets or SMTP. Can also be triggered manually via
+workflow_dispatch.
+
 ## Keeping local and remote in sync
 
 - **Before starting work:** run `git status` and `git fetch`, then check whether

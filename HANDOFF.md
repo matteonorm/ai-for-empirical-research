@@ -71,7 +71,8 @@ That's it — all links use `relative_url`, so no other changes needed.
 2. **No CNAME file** — plan lists it in the repo structure; not created yet because no domain is decided. Will add when URL is finalized.
 3. **PR-only workflow relaxed** — plan says "all changes via PR"; for this bootstrap phase we commit directly to main. Will enforce PR workflow once the skeleton is live.
 4. **Repo hosted on matteonorm's account** — temporary; plan envisions it under Paul's account/domain.
-5. **changelog.md and docs/PLAN.md excluded from site** — the plan lists changelog as a public page; we keep both in the repo as internal maintenance/spec docs but exclude them from the Jekyll build entirely (`_config.yml` exclude list). Neither appears in site navigation, and their URLs (`/changelog/`, `/docs/PLAN/`) will 404 after deploy. They must not be re-published or re-linked.
+5. **Monthly review implemented as GitHub Actions, not email** — `.github/workflows/monthly-reminder.yml` opens an issue on the 1st of each month with a review checklist. Uses `GITHUB_TOKEN` and `actions/github-script` — no SMTP secrets needed. Notification relies on GitHub's built-in issue-assignment emails.
+6. **changelog.md and docs/PLAN.md excluded from site** — the plan lists changelog as a public page; we keep both in the repo as internal maintenance/spec docs but exclude them from the Jekyll build entirely (`_config.yml` exclude list). Neither appears in site navigation, and their URLs (`/changelog/`, `/docs/PLAN/`) will 404 after deploy. They must not be re-published or re-linked.
 
 ## Local dev setup
 

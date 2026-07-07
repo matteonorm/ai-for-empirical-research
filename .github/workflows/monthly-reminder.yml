@@ -1,0 +1,41 @@
+# Open a GitHub Issue on the 1st of each month as a site review reminder.
+# Uses the built-in GITHUB_TOKEN — no secrets or SMTP needed.
+
+name: Monthly site review reminder
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create monthly review issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const month = new Date().toLocaleDateString('en-US', {
+              month: 'long',
+              year: 'numeric',
+              timeZone: 'America/New_York'
+            });
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Monthly site review — ${month}`,
+              assignees: ['matteonorm'],
+              body: [
+                '## Monthly review checklist',
+                '',
+                '- [ ] Re-run the getting-started path (install → first session → first result)',
+                '- [ ] Check every video link and timestamp in `_data/videos.yml` still resolves',
+                '- [ ] Note any model/tool version changes; update `last_verified` / `verified_with`',
+                '- [ ] Add a dated entry to `changelog.md`',
+                '- [ ] Confirm the live site builds and deploys (Actions green check)',
+              ].join('\n')
+            });
