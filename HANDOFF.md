@@ -1,0 +1,173 @@
+# HANDOFF — Decision Log & Current State
+
+**Date:** 2026-07-07
+**Phase:** 1 (skeleton)
+**Canonical spec:** `docs/PLAN.md`
+**Repo conventions:** `CLAUDE.md`
+
+## Version choices
+
+- **Ruby:** 3.3.5 locally (via chruby + ruby-install); CI uses 3.2.2 (matches Paul's workflow)
+- **Jekyll:** 4.3.4 (resolved from `~> 4.3.3` pin in Gemfile)
+- **Bundler:** 2.5.16 (bundled with Ruby 3.3.5)
+- **Minima theme:** 2.5.2 (from `~> 2.5` pin)
+- **jekyll-feed:** 0.17.0 (from `~> 0.12` pin)
+
+## Build path decision
+
+**Standalone Jekyll 4.3.4 + GitHub Actions deployment** — NOT the `github-pages` gem.
+
+Why: Paul's own repo (`paulgp/paulgp.github.io`) uses this exact setup. The
+`github-pages` gem line is commented out in his Gemfile. His CI workflow uses
+`ruby/setup-ruby` + `bundle exec jekyll build` + `actions/deploy-pages`. We mirror
+this so the two sites build identically and there are no gem-version surprises.
+
+> The plan (`docs/PLAN.md`) mentions "Set up local preview with the `github-pages` gem"
+> in Phase 1 step 3. This is outdated — Paul's actual repo does not use that gem. We
+> follow the repo, not the plan text, per the instruction to note outdated items here
+> rather than editing PLAN.md.
+
+## Baseurl
+
+**Value:** `/ai-for-empirical-research`
+
+This is a GitHub project page at `matteonorm.github.io/ai-for-empirical-research`.
+All internal links use `relative_url` so this just works.
+
+### Migration to final subdomain (checklist)
+
+When moving to e.g. `ai.paulgp.com`:
+
+- [ ] In `_config.yml`: change `baseurl` from `"/ai-for-empirical-research"` to `""`
+- [ ] In `_config.yml`: change `url` from `"https://matteonorm.github.io"` to `"https://ai.paulgp.com"`
+- [ ] Add a `CNAME` file containing `ai.paulgp.com`
+- [ ] Set up DNS CNAME record pointing `ai.paulgp.com` to the GitHub Pages domain
+- [ ] Transfer or fork the repo to Paul's GitHub account if needed
+
+That's it — all links use `relative_url`, so no other changes needed.
+
+## Files copied/adapted from paulgp.github.io
+
+| File | Source | Changes |
+|------|--------|---------|
+| `_layouts/default.html` | Paul's `_layouts/default.html` | Removed Google Analytics, PDF gallery scripts, profile image, CV/Papers/Blog nav links. Replaced with site-specific nav (Start Here, Pipeline, Elsewhere, Talks, Changelog). Added `<meta viewport>`. Used `relative_url` for all links. Removed inline accordion CSS (moved to stylesheet). |
+| `assets/css/styles.css` | Paul's `assets/css/styles.css` | Kept core typography (Spectral, DM Sans), colors (#faf8f5 bg, #b5451b links), grid layout, and sidenav styling. Removed some media query breakpoints for brevity. Added `.todo-placeholder` class. |
+| `assets/js/scale.fix.js` | Paul's `assets/js/scale.fix.js` | Verbatim copy. |
+| `.github/workflows/jekyll.yml` | Paul's `.github/workflows/jekyll.yml` | Changed branch from `master` to `main`. Otherwise identical. |
+| `Gemfile` | Paul's `Gemfile` | Removed `pdf-reader` gem (not needed — we have no PDF scanner plugin). Otherwise matches. |
+| `.gitignore` | Paul's `.gitignore` | Simplified to just Jekyll/vendor/macOS entries. |
+
+**Not copied** (not needed for this site):
+- `_layouts/blog.html` — blog-specific layout
+- `_includes/analytics.html` — Google Analytics (different property)
+- `_includes/cv.html`, `_includes/sidenote.html` — CV/blog-specific
+- `_includes/custom_math.html` — MathJax (not needed yet)
+- `_plugins/pdf_scanner.rb` — PDF gallery generator
+- `assets/css/blog.css`, `assets/css/github-light.css`, `assets/css/jekyll-code-style.css` — blog/code styling
+
+## Deviations from docs/PLAN.md
+
+1. **No `github-pages` gem** — plan mentions it in Phase 1 step 3; Paul's actual repo doesn't use it. Noted above.
+2. **No CNAME file** — plan lists it in the repo structure; not created yet because no domain is decided. Will add when URL is finalized.
+3. **PR-only workflow relaxed** — plan says "all changes via PR"; for this bootstrap phase we commit directly to main. Will enforce PR workflow once the skeleton is live.
+4. **Repo hosted on matteonorm's account** — temporary; plan envisions it under Paul's account/domain.
+
+## Local dev setup
+
+### Prerequisites
+
+Your Mac has Ruby 2.6.10 (system Ruby) which is too old for Jekyll 4.3.
+Ruby 3.3.5 is installed via `chruby` + `ruby-install` (both from Homebrew).
+
+To activate chruby in your shell (if not already sourced):
+```bash
+echo 'source /opt/homebrew/share/chruby/chruby.sh' >> ~/.zshrc
+echo 'source /opt/homebrew/share/chruby/auto.sh' >> ~/.zshrc
+source ~/.zshrc
+```
+
+The repo contains a `.ruby-version` file so chruby auto-switches to ruby-3.3.5.
+
+### Building the site
+
+```bash
+cd ai-for-empirical-research
+
+# Activate Ruby (if chruby auto.sh isn't sourced)
+source /opt/homebrew/share/chruby/chruby.sh && chruby ruby-3.3.5
+
+# Set repo-local gem path (one-time)
+bundle config set --local path vendor/bundle
+
+# Install dependencies
+bundle install
+
+# Serve locally
+bundle exec jekyll serve
+# → http://127.0.0.1:4000/ai-for-empirical-research/
+```
+
+### Common gotchas
+
+- **eventmachine compilation:** Ruby 3.3.5 was built with `CXX=false` in its
+  rbconfig, which prevents the eventmachine native extension from compiling.
+  Fixed by patching rbconfig:
+  ```bash
+  sed -i '' 's/CONFIG\["CXX"\] = "false"/CONFIG["CXX"] = "clang++"/' \
+    ~/.rubies/ruby-3.3.5/lib/ruby/3.3.0/arm64-darwin25/rbconfig.rb
+  ```
+  Also needed `--with-cxxflags` for the correct C++ SDK include path:
+  ```bash
+  bundle config set --local build.eventmachine \
+    "--with-cxxflags='-I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1'"
+  ```
+  These are persisted in `.bundle/config` and `rbconfig.rb` respectively — they
+  only need to be done once per machine.
+- If `bundle` still uses system Ruby, ensure chruby is sourced and restart your terminal.
+- The local URL includes the baseurl path — don't be surprised by `/ai-for-empirical-research/` in the URL.
+- `vendor/` is in `.gitignore` — gems are not committed.
+- Sass deprecation warnings from the minima theme are harmless.
+
+## Current state
+
+| Directory/File | Status |
+|----------------|--------|
+| `_config.yml` | Done |
+| `_layouts/default.html` | Done (adapted from Paul's) |
+| `_includes/video_page.html` | Done (template ready, needs real data in Phase 2) |
+| `_data/videos.yml` | Stubbed with TODO placeholders |
+| `_data/elsewhere.yml` | Stubbed with TODO placeholders |
+| `index.md` | Stubbed with nav links |
+| `start-here/*.md` (3 files) | Stubbed |
+| `pipeline/*.md` (7 files) | Stubbed with video_key front matter |
+| `restricted-data.md` | Stubbed |
+| `skills/index.md` | Stubbed |
+| `elsewhere.md` | Stubbed |
+| `changelog.md` | Stubbed |
+| `talks/nber-hf-2026.md` | Stubbed |
+| `assets/css/styles.css` | Done (adapted from Paul's) |
+| `assets/js/scale.fix.js` | Done (verbatim from Paul's) |
+| `.github/workflows/jekyll.yml` | Done (adapted from Paul's) |
+| `Gemfile` | Done |
+| `Gemfile.lock` | Done (generated with Ruby 3.3.5) |
+| `.ruby-version` | Done (ruby-3.3.5 for chruby auto-switch) |
+| `docs/PLAN.md` | Done (verbatim from Paul's PDF) |
+| `CLAUDE.md` | Done |
+| `HANDOFF.md` | This file |
+
+## Open questions for Paul
+
+(Carried from `docs/PLAN.md` section 7)
+
+1. **URL:** subdomain (`ai.paulgp.com`) vs. subpath (`paulgp.com/ai-research`)
+2. **Repo/site name:** keep `ai-for-empirical-research` or something shorter?
+3. **Scope of example repos for v1:** all three, or just hmda-pipeline before the talk?
+4. **License:** MIT for code, CC-BY for content?
+
+## Assumptions and guesses
+
+- **Default branch is `main`** — Paul's repo uses `master`; we use `main` (GitHub's current default). The workflow is configured for `main`.
+- **No Google Analytics** — removed from the layout. Will need a separate tracking ID if Paul wants analytics on this site.
+- **Minima theme kept** — Paul's _config.yml references the minima theme even though the custom CSS overrides most of it. We keep the gem dependency for compatibility but the visual styling comes from the custom `styles.css`.
+- **No profile image** — Paul's sidebar has his photo; we omit it. Could add a logo or Paul's photo later.
+- **Nav structure** — chose Start Here / Pipeline / Elsewhere / Talks / Changelog for the sidebar. This is a guess at the right top-level navigation; may need revision.

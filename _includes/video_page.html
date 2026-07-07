@@ -1,0 +1,43 @@
+{% assign video = site.data.videos[page.video_key] %}
+
+{% if video %}
+<div class="video-page">
+  <h2>{{ video.title }}</h2>
+
+  {% if video.youtube_id and video.youtube_id != "TODO" %}
+  <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1rem 0;">
+    <iframe
+      style="position:absolute;top:0;left:0;width:100%;height:100%;"
+      src="https://www.youtube.com/embed/{{ video.youtube_id }}"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+  {% else %}
+  <div class="todo-placeholder">TODO: Video embed will go here once youtube_id is populated in _data/videos.yml.</div>
+  {% endif %}
+
+  {% if video.duration and video.duration != "TODO" %}
+  <p><strong>Duration:</strong> {{ video.duration }}</p>
+  {% endif %}
+
+  {% if video.description and video.description != "TODO" %}
+  <p>{{ video.description }}</p>
+  {% endif %}
+
+  {% if video.substack_url and video.substack_url != "TODO" %}
+  <p><a href="{{ video.substack_url }}">Read the companion Substack post</a></p>
+  {% endif %}
+
+  {% if video.resources.size > 0 %}
+  <h3>Resources</h3>
+  <ul>
+    {% for resource in video.resources %}
+    <li><a href="{{ resource.url }}">{{ resource.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% else %}
+<div class="todo-placeholder">TODO: No video data found for key "{{ page.video_key }}". Check _data/videos.yml.</div>
+{% endif %}

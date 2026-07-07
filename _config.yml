@@ -1,0 +1,24 @@
+title: "AI for Empirical Research"
+description: >-
+  A curated guide to using AI tools in empirical research,
+  built around Paul Goldsmith-Pinkham's talks and resources.
+baseurl: "/ai-for-empirical-research"
+url: "https://matteonorm.github.io"
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - docs/
+  - HANDOFF.md
+  - CLAUDE.md
+  - README.md

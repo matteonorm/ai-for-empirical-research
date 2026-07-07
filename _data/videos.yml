@@ -1,0 +1,59 @@
+# Video data for pipeline pages.
+# Each entry is keyed by the pipeline page slug.
+# Phase 2 will populate these with real video metadata.
+
+01-setup:
+  title: "TODO: Setup & First Steps"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+02-data-analysis:
+  title: "TODO: Data Analysis with AI"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+03-scraping:
+  title: "TODO: Web Scraping"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+04-large-data:
+  title: "TODO: Large Data & APIs"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+05-writing:
+  title: "TODO: Academic Writing with AI"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+06-skills:
+  title: "TODO: Building AI Skills"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+07-workflow-git:
+  title: "TODO: Workflow & Git"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
