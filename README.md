@@ -77,3 +77,14 @@ Hard rules (do not re-litigate):
   Actions build deployed before calling a task done.
 - Small, reviewable commits; show me the diff or the local site before pushing.
 ```
+### Append this to each prompt
+
+```
+Also: keep local and the GitHub repo in sync in both directions. Before starting,
+run git fetch / git status and pull if behind. After creating the workflow,
+commit and push, then confirm the workflow appears in the repo's Actions tab.
+Record in CLAUDE.md and HANDOFF.md that a monthly review reminder exists and how
+it works. Show me the diff before pushing.
+```
+
+
