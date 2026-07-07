@@ -51,14 +51,26 @@ Use `bundle config set --local path vendor/bundle` to keep gems repo-local.
 
 ## Excluded from the site (but tracked in git)
 
-These files are in the repo but excluded from Jekyll processing via `_config.yml`:
-- `changelog.md` — change log, repo-only (not a public page)
-- `docs/` — contains PLAN.md (Paul's spec)
+These files are in the repo but excluded from Jekyll processing via `_config.yml`.
+They must NOT be re-published or re-linked from any site page.
+- `changelog.md` — internal change log, repo-only
+- `docs/PLAN.md` — Paul's canonical spec, repo-only
 - `HANDOFF.md`, `CLAUDE.md`, `README.md`
 
 ## Key files
 
-- `docs/PLAN.md` — Paul's canonical spec (do not edit)
+- `docs/PLAN.md` — Paul's canonical spec (do not edit; repo-only, not on the site)
 - `HANDOFF.md` — decision log and current state
 - `CLAUDE.md` — this file; how to work in the repo
-- `changelog.md` — change log (git-only, not rendered on the site)
+- `changelog.md` — internal change log (repo-only, not on the site)
+
+## Keeping local and remote in sync
+
+- **Before starting work:** run `git status` and `git fetch`, then check whether
+  local is behind the remote. If there are un-pulled remote commits, `git pull`
+  first. If there are uncommitted local changes, resolve them before starting.
+  Never begin edits on a stale or dirty working copy.
+- **After any change:** commit and push so the deployed site and local working
+  copy never drift. A change isn't "done" until it's pushed AND the Actions
+  build has deployed it — confirm the build succeeded (Actions tab shows a
+  green check) before considering the task complete.
