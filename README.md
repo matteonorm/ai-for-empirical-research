@@ -8,6 +8,41 @@ Public hub for materials on using AI tools in empirical research.
 
 Phase 1 complete: skeleton live, content still TODO.
 
+### Repo layout
+
+```
+ai-for-empirical-research/
+├── _config.yml            # Jekyll config (site settings, baseurl, excludes)
+├── index.md               # landing page: pitch + router to the three tracks
+├── _layouts/              # page templates, adapted from paulgp.github.io
+├── _includes/
+│   └── video_page.html    # the shared pipeline-page template
+├── _data/
+│   ├── videos.yml         # one entry per video: URL, timestamps, links
+│   └── elsewhere.yml      # curated external resources
+├── start-here/            # new-to-ai.md, casual-user.md, power-user.md
+├── pipeline/              # 01-setup … 07-workflow-git (seven stages)
+├── restricted-data.md     # working with data an agent can't touch (RDCs, PII)
+├── skills/                # downloadable skill files + starter CLAUDE.md
+├── elsewhere.md           # renders from _data/elsewhere.yml
+├── talks/
+│   └── nber-hf-2026.md    # landing page for the talk (the final-slide URL)
+├── .github/workflows/
+│   └── jekyll.yml         # build + deploy to GitHub Pages
+├── docs/PLAN.md           # Paul's spec (repo-only, excluded from build)
+├── CLAUDE.md              # repo conventions (repo-only)
+├── HANDOFF.md             # decision log (repo-only)
+├── changelog.md           # maintenance log (repo-only, excluded from build)
+└── README.md              # this file
+```
+
+### Internal docs
+
+* `docs/PLAN.md` — Paul's original build plan, verbatim. The source-of-truth spec.
+* `CLAUDE.md` — conventions for working in this repo with Claude Code.
+* `HANDOFF.md` — decision log: versions, deviations from the plan, migration checklist, and known workarounds.
+* `changelog.md` — dated maintenance log.
+
 ## Continuing work with Claude Code
 
 Paste this into a fresh Claude Code session:
