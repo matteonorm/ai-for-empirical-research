@@ -18,6 +18,15 @@ Two commits:
    User (top of the ladder) shows only the back link. Driven by a `next_track`
    field in `tracks.yml`.
 
+3. **Banner bug fixes** (two commits): the banner JS was silently broken by two
+   issues. First, pipeline pages render as `.html` files but `tracks.yml` URLs
+   omit the extension, so the path comparison never matched; fixed with a
+   `normPath` function that strips `.html` before comparing. Second, kramdown
+   was converting straight quotes inside `<script>` to curly (smart) quotes,
+   breaking all JS string literals; fixed by wrapping the script in
+   `{% raw %}` and passing dynamic data (tracks JSON, baseUrl) via `data-`
+   attributes on a hidden div.
+
 ## 2026-07-09 — Elsewhere: update Sant'Anna URL/description and Blattman title
 
 - Sant'Anna: changed URL from GitHub repo to `psantanna.com/claude-code-my-workflow/`;
