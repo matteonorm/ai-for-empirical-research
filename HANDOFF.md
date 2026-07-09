@@ -135,11 +135,31 @@ rendered on `pipeline/index.md` via a data-driven loop. Pending Paul's review.
 
 ## Start Here tracks
 
-The three tracks (New to AI, Casual User, Power User) are now data-driven via
-`_data/tracks.yml`, with each entry holding `title`, `url`, and `tagline`.
+The three tracks (New to AI, Casual User, Power User) are data-driven via
+`_data/tracks.yml`. Each entry has `title`, `url`, `tagline`, `framing` (a short
+paragraph), and `path` (an ordered list of `{title, url, why}` items).
 `start-here/index.md` loops over the data file using an explicit slug list
-(matching the pipeline pattern). Taglines are Matteo's editorial audience
-descriptors, pending Paul's review.
+(matching the pipeline pattern).
+
+Taglines, framing paragraphs, and path why-lines are all Matteo's editorial
+phrasing (in Paul's voice, not sourced from posts), pending Paul's review.
+
+### External links in tracks
+
+| Track | Title | URL | Source |
+|-------|-------|-----|--------|
+| casual-user | AI and the Research O-Ring | `https://paulgp.substack.com/p/ai-and-the-research-o-ring` | Substack |
+| power-user | llms.txt for Academic Papers | `https://paulgp.com/2026/03/10/llms-txt-for-academic-papers.html` | paulgp.com |
+| power-user | AI One-Shot Papers | `https://paulgp.com/2026/03/21/ai-oneshot-papers.html` | paulgp.com |
+
+### O-Ring label (flagged for Paul)
+
+The why-line for "AI and the Research O-Ring" is Matteo's editorial framing
+("Why it's worth going deeper."). The actual post argues something different:
+O-Ring dynamics mean AI can't bypass the weakest link in research, and human
+bottlenecks in downstream tasks are amplified rather than relieved. This is a
+structural warning, not encouragement. The label is kept as Matteo's editorial
+choice, pending Paul's review of whether it matches his intent for this track.
 
 ## Local dev setup
 

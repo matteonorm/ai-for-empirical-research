@@ -3,14 +3,19 @@ layout: default
 title: "Changelog"
 ---
 
-## 2026-07-09 — Data-drive Start Here tracks
+## 2026-07-09 — Populate Start Here tracks (data-driven)
 
-- Created `_data/tracks.yml` with three track entries (new-to-ai, casual-user,
-  power-user), each with title, url, and tagline.
-- Rewrote `start-here/index.md` to loop over the data file (explicit slug list,
-  matching pipeline pattern). Removed em-dashes from the old hand-written list.
-- Added `.track-tagline` CSS (shares rule with `.pipeline-tagline`).
-- Taglines are Matteo's editorial audience descriptors, pending Paul's review.
+- Extended `_data/tracks.yml` with `framing`, `path` (ordered list of
+  `{title, url, why}`), and `closing` fields for each track.
+- `start-here/index.md` renders each track as: heading, tagline, framing
+  paragraph, numbered path with links and why-lines, closing (new-to-ai only).
+- Three external links added: AI and the Research O-Ring (Substack), llms.txt
+  for Academic Papers (paulgp.com), AI One-Shot Papers (paulgp.com).
+- Added `.track-section`, `.track-why`, `.track-closing` CSS rules.
+- O-Ring why-line ("Why it's worth going deeper") flagged for Paul: the post
+  actually argues a bottleneck warning, not encouragement.
+- All framing paragraphs and why-lines are Matteo's editorial phrasing, pending
+  Paul's review.
 
 ## 2026-07-09 — Dictated pipeline taglines
 
