@@ -28,15 +28,28 @@ analysis of trends like the rise of fintech mortgage lenders.
 | 27:55 | Harmonizing 18 years of mortgage data              | unverified |
 | 42:01 | Fintech lender classification and market-share trends | unverified |
 
-## What you'll learn (from post)
+## What you'll learn (from post's numbered Takeaways section)
 
-These are paraphrased from Paul's own framing in the companion Substack post:
+Paul lists seven takeaways at the end of the post. The live bullets paraphrase
+and compress these. Mapping:
 
-1. How to turn a large, messy administrative dataset into a clean, documented, queryable database using Claude Code. Post states this as the core demonstration.
-2. Converting CSVs to Parquet for 15x compression and using DuckDB to query data too large for memory. Post describes the technical fundamentals.
-3. Building metadata tables as "context engineering for data": self-documenting datasets that preserve context across sessions. Post introduces this as the key conceptual contribution.
-4. Using Claude Code's planning mode to design the architecture before writing any code. Post emphasizes this as essential for complex pipelines.
-5. A generalizable pattern (download → convert → harmonize → document → query → analyze) that applies to HMDA, Medicare claims, patent filings, and other large administrative datasets. Post states this explicitly as the transferable lesson.
+| Paul's # | Takeaway | Live bullet? |
+|-----------|----------|--------------|
+| 1 | "The cost of doing data engineering properly has collapsed" | Merged into bullet 6 with #7 |
+| 2 | "When data doesn't fit in RAM, don't force it" (DuckDB + Parquet) | Bullet 1 |
+| 3 | "Metadata tables are context engineering for data" | Bullet 2 |
+| 4 | "Plan mode before code" | Bullet 3 |
+| 5 | "Ask what's feasible" | Bullet 4 |
+| 6 | "Sub-agents are powerful but imperfect" | Bullet 5 |
+| 7 | "The big datasets are more accessible than you think" | Merged into bullet 6 with #1 |
+
+Live bullets (6, paraphrased from Paul):
+1. Use DuckDB and Parquet instead of CSVs and dataframes when data doesn't fit in RAM, with lazy-loading and fast aggregation
+2. Build metadata tables as "context engineering for data": store schema, descriptions, and value labels inside the database so it documents itself across sessions
+3. Use plan mode before writing code, so Claude designs the pipeline architecture and creates a persistent reference rather than jumping into premature edits
+4. Ask what's feasible first. Inquire about obstacles and missing information before directing Claude to complete a task
+5. Deploy parallel sub-agents for research tasks, but verify they inherit your constraints, since they write their own sub-prompts
+6. The fixed cost of proper data engineering has collapsed: large administrative datasets (HMDA, Medicare claims, patent filings) are more accessible than the tooling barriers suggest
 
 ## High-Level Applications (NOTES ONLY, not published)
 

@@ -3,6 +3,13 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Re-derive takeaways from Paul's numbered list
+
+- Replaced 5 takeaway bullets with 6 derived directly from Paul's seven numbered
+  takeaways at the end of the Substack post. Added sub-agents (#6) and "ask
+  what's feasible" (#5), which were missing. Merged cost-collapsed (#1) with
+  accessibility (#7). Content-notes updated with full mapping table.
+
 ## 2026-07-09 — Remove duplicate title heading from video_page include
 
 - Removed `<h2>{{ video.title }}</h2>` from `_includes/video_page.html`. The page
