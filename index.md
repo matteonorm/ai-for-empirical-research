@@ -20,7 +20,7 @@ Pick your track:
 
 ### The Pipeline
 
-- [Setup & First Steps]({{ '/pipeline/01-setup' | relative_url }})
+- [Getting Started with Claude Code]({{ '/pipeline/01-setup' | relative_url }})
 - [Data Analysis]({{ '/pipeline/02-data-analysis' | relative_url }})
 - [Web Scraping]({{ '/pipeline/03-scraping' | relative_url }})
 - [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})

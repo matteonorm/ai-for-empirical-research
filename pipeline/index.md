@@ -9,7 +9,7 @@ title: "The Pipeline"
 TODO: Brief framing paragraph — what the pipeline is and how to use it.
 </div>
 
-1. [Setup & First Steps]({{ '/pipeline/01-setup' | relative_url }})
+1. [Getting Started with Claude Code]({{ '/pipeline/01-setup' | relative_url }})
 2. [Data Analysis with AI]({{ '/pipeline/02-data-analysis' | relative_url }})
 3. [Web Scraping]({{ '/pipeline/03-scraping' | relative_url }})
 4. [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})

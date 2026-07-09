@@ -3,12 +3,26 @@
 # Phase 2 will populate these with real video metadata.
 
 01-setup:
-  title: "TODO: Setup & First Steps"
-  youtube_id: "TODO"
-  duration: "TODO"
-  description: "TODO"
-  substack_url: "TODO"
-  resources: []
+  title: "Getting Started with Claude Code"
+  youtube_id: "HzgByl5ZsWE"
+  duration: "36:31"
+  description: ""
+  substack_url: "https://paulgp.substack.com/p/getting-started-with-claude-code"
+  takeaways:
+    - "Start with a clear subscription choice: Pro ($20/month) for light use, Max ($100/month) for daily coding, since the context window and rate limits determine how far each session goes"
+    - "Set up a proper terminal (Ghostty or iTerm2, Zellij for multiplexing, Oh My Zsh) so you can run Claude Code alongside your editor and shell"
+    - "Understand the context window: Claude holds roughly 200,000 tokens, auto-compacts when full, and sessions work best within 5 to 10 turns before starting fresh"
+    - "Be specific in your prompts and correct early when Claude drifts, rather than letting mistakes compound across turns"
+    - "Trust but verify: let Claude write the code, but always check research-critical output yourself"
+  resources:
+    - title: "Claude Code documentation"
+      url: "https://docs.anthropic.com/en/docs/claude-code"
+    - title: "Ghostty terminal"
+      url: "https://ghostty.org/"
+    - title: "Zellij terminal multiplexer"
+      url: "https://zellij.dev/"
+    - title: "Oh My Zsh"
+      url: "https://ohmyz.sh/"
 
 02-data-analysis:
   title: "TODO: Data Analysis with AI"
