@@ -27,7 +27,7 @@ Pick your track:
 - [Writing and Thinking with AI]({{ '/pipeline/05-writing' | relative_url }})
 - [Skills: How an Agent Should Think]({{ '/pipeline/06-skills' | relative_url }})
 - [Permissions & Sandboxes]({{ '/pipeline/07-permissions' | relative_url }})
-- [Workflow & Git]({{ '/pipeline/08-workflow-git' | relative_url }})
+- [Integration and Collaboration]({{ '/pipeline/08-workflow-git' | relative_url }})
 
 ### More
 

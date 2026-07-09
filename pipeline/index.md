@@ -16,4 +16,4 @@ TODO: Brief framing paragraph — what the pipeline is and how to use it.
 5. [Writing and Thinking with AI]({{ '/pipeline/05-writing' | relative_url }})
 6. [Skills: Specifying How an Agent Should Think]({{ '/pipeline/06-skills' | relative_url }})
 7. [Permissions, Sandboxes, and Autonomous Agents]({{ '/pipeline/07-permissions' | relative_url }})
-8. [Workflow & Git]({{ '/pipeline/08-workflow-git' | relative_url }})
+8. [Integration and Collaboration]({{ '/pipeline/08-workflow-git' | relative_url }})

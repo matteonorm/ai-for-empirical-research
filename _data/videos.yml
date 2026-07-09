@@ -148,9 +148,19 @@
       url: "https://openclaw.ai/"
 
 08-workflow-git:
-  title: "TODO: Workflow & Git"
-  youtube_id: "TODO"
-  duration: "TODO"
-  description: "TODO"
-  substack_url: "TODO"
-  resources: []
+  title: "Integration and Collaboration in AI Research Work"
+  youtube_id: "EcloxLPcRsY"
+  duration: "65:14"
+  description: ""
+  substack_url: "https://paulgp.substack.com/p/integration-and-collaboration-in"
+  takeaways:
+    - "Ask for the audit trail before the work happens: commit messages, issue references, and documentation should be part of the workflow, not an afterthought"
+    - "Review commits, not full codebases; the unit of verification is a bounded diff, not thousands of lines"
+    - "Treat documentation as a map, not a verdict: LLMs will claim results are done that are not, so verify and consider having another AI review"
+    - "Route feedback through GitHub issues to keep the paper trail useful for both humans and agents"
+    - "No hand-typed numbers: code emits results, the draft ingests them, and git connects the two; review the method before you wire it in"
+  resources:
+    - title: "ipo-bump project repo"
+      url: "https://github.com/paulgp/ipo-bump"
+    - title: "Jay Ritter's IPO data"
+      url: "https://site.warrington.ufl.edu/ritter/ipo-data/"
