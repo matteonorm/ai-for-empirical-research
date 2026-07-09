@@ -128,6 +128,18 @@ section > h3:not(:first-of-type) {
   margin-left: auto;
 }
 
+.track-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: #f0ede8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.82rem;
+}
+
 p, ul, ol { margin-bottom: 0.75rem; }
 li { margin: 0.5rem 0; line-height: 1.6; }
 li li { margin: 0.25rem 0; }

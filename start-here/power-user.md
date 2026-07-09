@@ -14,7 +14,7 @@ track_key: "power-user"
   {% if step.external %}
   <a href="{{ step.url }}" target="_blank" rel="noopener noreferrer">{{ step.title }} ↗</a>
   {% else %}
-  <a href="{{ step.url | relative_url }}">{{ step.title }}</a>
+  <a href="{{ step.url | relative_url }}?track={{ page.track_key }}">{{ step.title }}</a>
   {% endif %}
   <span class="track-why">{{ step.why }}</span>
 </li>
