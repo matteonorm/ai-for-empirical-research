@@ -28,6 +28,16 @@ mortgage lenders.
 | 27:55 | Harmonizing 18 years of mortgage data              | unverified |
 | 42:01 | Fintech lender classification and market-share trends | unverified |
 
+## What you'll learn (from post)
+
+These are paraphrased from Paul's own framing in the companion Substack post:
+
+1. How to turn a large, messy administrative dataset into a clean, documented, queryable database using Claude Code — post states this as the core demonstration
+2. Converting CSVs to Parquet for 15x compression and using DuckDB to query data too large for memory — post describes the technical fundamentals
+3. Building metadata tables as "context engineering for data" — post introduces this as the key conceptual contribution, making datasets self-documenting across sessions
+4. Using Claude Code's planning mode to design the architecture before writing any code — post emphasizes this as essential for complex pipelines
+5. A generalizable pattern (download → convert → harmonize → document → query → analyze) that applies to HMDA, Medicare claims, patent filings, and other large administrative datasets — post states this explicitly as the transferable lesson
+
 ## High-Level Applications (NOTES ONLY — not published)
 
 - County-by-year mortgage lending panels (originations, dollar volume, lender counts)

@@ -147,8 +147,15 @@ Each entry in `_data/videos.yml` is keyed by the pipeline page slug and has thes
 ```
 
 The include (`_includes/video_page.html`) reads: `title`, `youtube_id`, `duration`,
-`description`, `substack_url`, and `resources` (list of `{url, title}`). There is no
-`timestamps` field — timestamps are captured in `content-notes/` only (see below).
+`description`, `substack_url`, `takeaways` (list of strings), and `resources`
+(list of `{url, title}`). There is no `timestamps` field — timestamps are captured
+in `content-notes/` only (see below).
+
+**`takeaways` (proposed — pending Paul's approval for all pages):** An optional list
+of strings rendered as a "What you'll learn" bulleted list after the title and before
+the video embed. Renders nothing if absent or empty. Currently populated only for
+04-large-data as a pilot. Sourced from the companion post's own framing, not invented.
+Do not roll out to other pages until Paul reviews the format.
 
 ## content-notes/ layer
 

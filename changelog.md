@@ -3,6 +3,24 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — 04-large-data: "What you'll learn" + title fix
+
+- **`_includes/video_page.html`**: added conditional `takeaways` block — renders
+  a "What you'll learn" bulleted list when the entry has a non-empty `takeaways`
+  list; renders nothing otherwise. Placed after the title, before the video embed.
+- **`_data/videos.yml`**: added 5 `takeaways` bullets for 04-large-data, sourced
+  from Paul's framing in the companion Substack post.
+- **Title fix**: renamed "Large Data & APIs" → "Large Datasets and Structured
+  Databases" (the video's real title) in `pipeline/04-large-data.md` front matter,
+  `index.md`, and `pipeline/index.md`.
+- **`content-notes/large-data.md`**: added "What you'll learn (from post)" section
+  with sourcing annotations.
+
+**Note:** the `takeaways` template element is a proposed richer-template addition,
+pending Paul's review before rolling out to all pages.
+
+**Tool:** Claude Code (Opus 4.6)
+
 ## 2026-07-09 — Phase 2 pilot: 04-large-data
 
 **Format pilot** — populated real content for one topic (large-data) to establish

@@ -4,6 +4,15 @@
 <div class="video-page">
   <h2>{{ video.title }}</h2>
 
+  {% if video.takeaways.size > 0 %}
+  <h3>What you'll learn</h3>
+  <ul>
+    {% for item in video.takeaways %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
   {% if video.youtube_id and video.youtube_id != "TODO" %}
   <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1rem 0;">
     <iframe
