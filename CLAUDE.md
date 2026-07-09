@@ -23,6 +23,9 @@ If you need to change video metadata, edit `_data/videos.yml`.
 
 The `elsewhere.md` page renders from `_data/elsewhere.yml`.
 
+The `start-here/index.md` page renders tracks from `_data/tracks.yml`.
+Each track entry has `title`, `url`, and `tagline`.
+
 ## Links and URLs
 
 Use Jekyll's `relative_url` and `link` filters for ALL internal links and assets.

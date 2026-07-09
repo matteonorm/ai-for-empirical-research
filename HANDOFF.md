@@ -133,6 +133,14 @@ The `tagline` field on each `videos.yml` entry is Matteo's editorial phrasing
 (written in Paul's voice, not sourced from the companion posts). These are
 rendered on `pipeline/index.md` via a data-driven loop. Pending Paul's review.
 
+## Start Here tracks
+
+The three tracks (New to AI, Casual User, Power User) are now data-driven via
+`_data/tracks.yml`, with each entry holding `title`, `url`, and `tagline`.
+`start-here/index.md` loops over the data file using an explicit slug list
+(matching the pipeline pattern). Taglines are Matteo's editorial audience
+descriptors, pending Paul's review.
+
 ## Local dev setup
 
 ### Prerequisites

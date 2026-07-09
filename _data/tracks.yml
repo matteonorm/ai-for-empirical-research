@@ -1,0 +1,14 @@
+new-to-ai:
+  title: "New to AI"
+  url: "/start-here/new-to-ai"
+  tagline: "Never used AI tools in research before."
+
+casual-user:
+  title: "Casual User"
+  url: "/start-here/casual-user"
+  tagline: "You’ve used ChatGPT or similar and want to go deeper."
+
+power-user:
+  title: "Power User"
+  url: "/start-here/power-user"
+  tagline: "Already comfortable, looking for advanced techniques."

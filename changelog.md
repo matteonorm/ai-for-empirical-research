@@ -3,6 +3,15 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Data-drive Start Here tracks
+
+- Created `_data/tracks.yml` with three track entries (new-to-ai, casual-user,
+  power-user), each with title, url, and tagline.
+- Rewrote `start-here/index.md` to loop over the data file (explicit slug list,
+  matching pipeline pattern). Removed em-dashes from the old hand-written list.
+- Added `.track-tagline` CSS (shares rule with `.pipeline-tagline`).
+- Taglines are Matteo's editorial audience descriptors, pending Paul's review.
+
 ## 2026-07-09 — Dictated pipeline taglines
 
 - Replaced auto-sourced taglines with Matteo's editorial one-liners (in Paul's
