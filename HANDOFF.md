@@ -154,24 +154,27 @@ URL notes:
 
 ## Landing page (index.md)
 
-The landing page is a focused narrative arc: compression thesis framing,
-compression diagram, applications-everywhere beat, "it's already happening"
-transition, econ-lit trend chart with paper download, and a closing CTA to
-Start Here.
+The landing page arc: compression framing → native diagram → adoption
+paragraph → econ-lit chart + paper download → closing/CTA. Exactly one
+"this site is" mission statement (the closing). No duplicate adoption lines.
 
-**Framing:** The compression thesis (AI shortens the distance between research
-stages without removing the researcher) is drawn from Paul's "Research in the
-Time of AI" post. Matteo's editorial phrasing in Paul's voice, pending Paul.
+**Framing:** Two paragraphs on the compression thesis (AI shortens the
+distance between research stages without removing the researcher). Drawn
+from Paul's "Research in the Time of AI" post. Matteo's editorial phrasing
+in Paul's voice, pending Paul.
 
 **Compression diagram:** Native inline SVG in `_includes/compression_diagram.html`.
 Shows the research pipeline (Ideation → Design → Data → Analysis → Writing →
 Paper) in two rows: "Traditional" with wide gaps, "With AI" with compressed gaps.
 Built in site style (Spectral, DM Sans, rust #b5451b). No external dependencies
-or hotlinked images. Attributed to Paul's original figure with a link to the post.
+or hotlinked images. Caption is attribution-only: a single orange link
+"Research in the Time of AI" pointing to Paul's post. Not Paul's asset; a
+native rebuild crediting his figure.
 
-**Applications-everywhere beat:** Bridging paragraph ("And it helps everywhere
-along the way...") sourced from the stage-by-stage section of Paul's post.
-Matteo's editorial phrasing, pending Paul.
+**Adoption paragraph:** Scoped deliberately to what the chart measures:
+mentions of LLMs in the economics literature, not claims about workflow
+adoption or productivity. Honest framing: "as the field works out where
+they fit." Matteo's editorial phrasing, pending Paul.
 
 **Chart:** Vanilla JS canvas in `_includes/econlit_chart.html`, reading
 committed CSVs via fetch (same `{% raw %}`/data-attributes pattern as the
@@ -188,15 +191,18 @@ re-exporting from Paul's pipeline tool and replacing the CSVs. Monthly
 task (add to the review checklist).
 
 **Flags for Paul:**
-1. All framing, captions, diagram caption, and closing CTA are Matteo's
+1. All landing copy (framing, adoption paragraph, closing/CTA) is Matteo's
    editorial phrasing, pending Paul's review.
 2. The compression diagram is a native rebuild inspired by Paul's figure
    in "Research in the Time of AI." Attributed, not copied. Paul should
    confirm the attribution and whether he wants it on the front page.
-3. The chart + data + download block features Paul's own econ-lit pipeline
-   research artifact on the front page. Paul should confirm he wants this
+3. The econ-lit chart + data + download block features Paul's own research
+   artifact on the front page. Paul should confirm he wants this
    prominently featured.
-4. The "41,000+" figure in the download caption is attributed to Paul's
+4. The adoption paragraph is deliberately scoped to what the chart measures
+   (mentions in the literature, not workflow usage). This is an honest
+   framing choice, not an oversight.
+5. The "41,000+" figure in the download caption is attributed to Paul's
    tool's scope.
 
 ## Pipeline taglines

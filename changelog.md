@@ -3,6 +3,20 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Landing page: final arc (framing, diagram, adoption, chart, CTA)
+
+- Rewrote landing page to its final structure: compression framing (two paragraphs),
+  native SVG diagram (attribution-only caption linking to Paul's post), adoption
+  paragraph scoped to what the chart actually measures (mentions in the literature,
+  not workflow usage), econ-lit chart with download, and a single closing/CTA.
+- Exactly one "this site is" mission statement (the closing). No duplicate
+  "climbed since 2022" or "already happening" lines.
+- Diagram caption simplified to a single orange link: "Research in the Time of AI."
+- Chart caption restored: Paul Goldsmith-Pinkham attribution, download link, and
+  41,000+ scope line.
+- All landing copy is Matteo's editorial pending Paul. The adoption paragraph is
+  deliberately honest about what the chart measures.
+
 ## 2026-07-09 — Landing: add applications-everywhere beat
 
 - Added a bridging paragraph between the compression diagram and the econ-lit
