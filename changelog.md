@@ -3,6 +3,13 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Per-track closing lines matching the graduation ladder
+
+- Each track page now ends with a closing line pointing to the next track up
+  the ladder and the full pipeline: New to AI → Casual User, Casual → Power
+  User, Power → full pipeline + Elsewhere. Replaces the old `closing_before`/
+  `closing_after` YAML fields with inline template closings. All links internal.
+
 ## 2026-07-09 — Navigation fixes: context-swap, banner layout, Further reading
 
 Two commits:

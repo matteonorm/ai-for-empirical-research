@@ -29,3 +29,5 @@ track_key: "power-user"
 {% endfor %}
 </ul>
 {% endif %}
+
+<p class="track-closing">That's the frontier. Browse the <a href="{{ '/pipeline/' | relative_url }}">full pipeline</a>, or explore further resources <a href="{{ '/elsewhere' | relative_url }}">elsewhere</a>.</p>

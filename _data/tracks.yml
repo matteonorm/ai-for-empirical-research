@@ -11,8 +11,6 @@ new-to-ai:
     - title: "From an Empty Folder to a Figure"
       url: "/pipeline/02-data-analysis"
       why: "Take a question all the way to a publication-quality figure."
-  closing_before: "Once those feel natural, "
-  closing_after: " covers the rest."
 
 casual-user:
   title: "Casual User"

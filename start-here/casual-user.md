@@ -29,3 +29,5 @@ track_key: "casual-user"
 {% endfor %}
 </ul>
 {% endif %}
+
+<p class="track-closing">Comfortable with these? Step up to the <a href="{{ '/start-here/power-user' | relative_url }}">Power User track</a>, or browse the <a href="{{ '/pipeline/' | relative_url }}">full pipeline</a>.</p>

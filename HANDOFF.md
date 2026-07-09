@@ -221,8 +221,13 @@ Four mechanisms added in separate commits:
    casual-user, power-user) are structurally identical: framing paragraph,
    numbered sequential path (internal items only, with `?track=` links),
    optional "Further reading" subsection (external links, new tab, ↗ marker,
-   not in the `?track=` chain), and optional closing. External links in
-   `tracks.yml` live under `further_reading`, not `path`.
+   not in the `?track=` chain), and a closing line. External links in
+   `tracks.yml` live under `further_reading`, not `path`. Each closing line
+   mirrors the graduation ladder: New to AI → Casual User track, Casual →
+   Power User track, Power → full pipeline + Elsewhere. These are Matteo's
+   editorial phrasing, pending Paul's review. The old `closing_before`/
+   `closing_after` YAML fields have been removed; closings are now inline
+   in each track page template.
 
 ## Local dev setup
 

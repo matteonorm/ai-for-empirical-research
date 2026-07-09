@@ -30,6 +30,4 @@ track_key: "new-to-ai"
 </ul>
 {% endif %}
 
-{% if track.closing_before %}
-<p class="track-closing">{{ track.closing_before }}<a href="{{ '/pipeline/' | relative_url }}">the full pipeline</a>{{ track.closing_after }}</p>
-{% endif %}
+<p class="track-closing">Once these feel natural, try the <a href="{{ '/start-here/casual-user' | relative_url }}">Casual User track</a>, or browse the <a href="{{ '/pipeline/' | relative_url }}">full pipeline</a> for AI in empirical research.</p>
