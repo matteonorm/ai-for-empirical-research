@@ -44,7 +44,7 @@ mortgage lenders.
 - HMDA Data — CFPB: https://www.consumerfinance.gov/data-research/hmda/
 - DuckDB: https://duckdb.org/
 - IPEDS Database (example project): https://github.com/paulgp/ipeds-database
-- Patent Data (example project): https://github.com/paulgp/patent-data
+- Patent Data (example project): https://github.com/paulgp/patent-data — **404 as of 2026-07-09**
 
 ### Additional references from the post (not live)
 - HMDA historic loan data download: https://files.consumerfinance.gov/hmda-historic-loan-data/hmda_{YEAR}_nationwide_all-records_codes.zip
@@ -57,6 +57,8 @@ mortgage lenders.
 1. **hmda-pipeline repo does not exist** — PLAN.md references https://github.com/paulgp/hmda-pipeline
    but it returns 404 as of 2026-07-09. Omitted from live resources. Should Paul create it,
    or should the site reference a different repo?
+2. **patent-data repo does not exist** — Substack post references https://github.com/paulgp/patent-data
+   but it returns 404 as of 2026-07-09. Omitted from live resources.
 2. **Video duration** (55:30) extracted from YouTube page metadata — not manually verified.
 3. **Timestamps** from Markus Academy Substack listing, not verified against video playback.
    Need someone to scrub through the video to confirm.

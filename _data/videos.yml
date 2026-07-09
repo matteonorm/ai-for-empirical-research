@@ -39,8 +39,6 @@
       url: "https://duckdb.org/"
     - title: "IPEDS Database (example project)"
       url: "https://github.com/paulgp/ipeds-database"
-    - title: "Patent Data (example project)"
-      url: "https://github.com/paulgp/patent-data"
 
 05-writing:
   title: "TODO: Academic Writing with AI"
