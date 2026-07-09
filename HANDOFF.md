@@ -1,7 +1,7 @@
 # HANDOFF — Decision Log & Current State
 
 **Date:** 2026-07-09
-**Phase:** 2 (content — pilot: 04-large-data)
+**Phase:** 2 (content — all 8 pipeline topics populated)
 **Canonical spec:** `docs/PLAN.md`
 **Repo conventions:** `CLAUDE.md`
 
@@ -87,6 +87,45 @@ The enforceable rules are in `CLAUDE.md` under "Writing style."
 4. **Repo hosted on matteonorm's account** — temporary; plan envisions it under Paul's account/domain.
 5. **Monthly review implemented as GitHub Actions, not email** — `.github/workflows/monthly-reminder.yml` opens an issue on the 1st of each month with a review checklist. Uses `GITHUB_TOKEN` and `actions/github-script` — no SMTP secrets needed. Notification relies on GitHub's built-in issue-assignment emails.
 6. **changelog.md and docs/PLAN.md excluded from site** — the plan lists changelog as a public page; we keep both in the repo as internal maintenance/spec docs but exclude them from the Jekyll build entirely (`_config.yml` exclude list). Neither appears in site navigation, and their URLs (`/changelog/`, `/docs/PLAN/`) will 404 after deploy. They must not be re-published or re-linked.
+7. **8 pipeline stages, not 7** — PLAN.md lists 7 stages (01-setup through 07-workflow-git). We added 07-permissions (Permissions, Sandboxes, and Autonomous Agents) based on Paul's Substack post and Markus Academy video (Ep. 162-7), renumbering workflow-git to 08. This is a proposal for Paul's review, not a unilateral change.
+
+## Bold "What you'll learn" heading fix
+
+The `.video-page h3` tags (both "What you'll learn" and "Resources") were
+rendering at `font-weight: 400` because the styled h3 rules in `styles.css`
+use `section > h3` direct-child selectors, which don't reach inside the
+`.video-page` div. Fixed by adding a `.video-page h3` rule that mirrors the
+`section > h3:not(:first-of-type)` styling (DM Sans, uppercase, 500-weight,
+border-top, #888 color).
+
+## All pipeline content (Phase 2 batch)
+
+All 8 pipeline pages now have real content. Each entry in `_data/videos.yml`
+has: title, youtube_id (verified via oembed), duration (from YouTube metadata),
+substack_url, takeaways (sourced from Paul's own sections), and resources.
+Each `pipeline/*.md` file has a 3-sentence summary and the include. Each topic
+has repo-only working notes in `content-notes/`.
+
+All content is DRAFT, pending Paul's review. No em-dashes in any prose.
+
+### Video-ID verification (all confirmed via YouTube oembed)
+
+| Stage | Slug | youtube_id | Markus Academy Ep. |
+|-------|------|------------|-------------------|
+| 01 | setup | HzgByl5ZsWE | 162-1 |
+| 02 | data-analysis | Rp17XUPxa4I | 162-2 |
+| 03 | scraping | wqLZrKdevHs | 162-3 |
+| 04 | large-data | 4uwI1-9DafU | 162-4 |
+| 05 | writing | BxfSiB3Moyo | 162-5 |
+| 06 | skills | a03ehomPqMA | 162-6 |
+| 07 | permissions | 8Jnx5rL_Gfk | 162-7 |
+| 08 | workflow-git | EcloxLPcRsY | 162-8 |
+
+### Repo/URL flags
+
+- **hmda-pipeline** (https://github.com/paulgp/hmda-pipeline): still 404
+- **patent-data** (https://github.com/paulgp/patent-data): still 404
+- All other referenced repos verified 200 as of 2026-07-09
 
 ## Local dev setup
 
@@ -200,19 +239,20 @@ The correct large-data ID is `4uwI1-9DafU` (Markus Academy Ep. 162-4), confirmed
 |----------------|--------|
 | `_config.yml` | Done |
 | `_layouts/default.html` | Done (adapted from Paul's) |
-| `_includes/video_page.html` | Done (template ready, needs real data in Phase 2) |
-| `_data/videos.yml` | 04-large-data populated; rest stubbed with TODO |
+| `_includes/video_page.html` | Done (template with takeaways, embed, resources) |
+| `_data/videos.yml` | All 8 pipeline entries populated |
 | `_data/elsewhere.yml` | Stubbed with TODO placeholders |
-| `index.md` | Stubbed with nav links |
+| `index.md` | All 8 pipeline links with real titles |
 | `start-here/index.md` | Stubbed (landing page with track picker) |
 | `start-here/*.md` (3 track files) | Stubbed |
-| `pipeline/index.md` | Stubbed (landing page listing all 7 stages) |
-| `pipeline/*.md` (7 stage files) | 04-large-data has draft summary; rest stubbed |
+| `pipeline/index.md` | All 8 stages listed with real titles |
+| `pipeline/*.md` (8 stage files) | All populated with summaries + includes |
 | `restricted-data.md` | Stubbed |
 | `skills/index.md` | Stubbed |
+| `skills/pgp-writing-style/SKILL.md` | Portable voice skill fallback (excluded from build) |
 | `elsewhere.md` | Stubbed |
-| `changelog.md` | Pilot entry added (excluded from site build, git-only) |
-| `content-notes/large-data.md` | Repo-only working notes for 04-large-data |
+| `changelog.md` | Batch entry added (excluded from site build, git-only) |
+| `content-notes/*.md` (8 files) | Repo-only working notes for all 8 topics |
 | `talks/nber-hf-2026.md` | Stubbed |
 | `assets/css/styles.css` | Done (adapted from Paul's) |
 | `assets/js/scale.fix.js` | Done (verbatim from Paul's) |

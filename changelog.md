@@ -3,6 +3,53 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Batch content, 8-stage restructure, heading fix
+
+### Branch rename
+- Renamed `content/large-data` to `content`. Closed PR #2 (git ref conflict);
+  new PR opened from `content`.
+
+### Bold "What you'll learn" heading (Phase B)
+- Added `.video-page h3` CSS rule to match `section > h3:not(:first-of-type)`
+  styling (DM Sans, uppercase, 500-weight, border-top). The h3 tags inside
+  `.video-page` were getting base h3 style (font-weight 400) because the styled
+  rules use direct-child selectors. Affects both "What you'll learn" and
+  "Resources" headings on all pipeline pages.
+
+### 8-stage restructure (Phase C, proposal for Paul)
+- Added `pipeline/07-permissions.md` (Permissions, Sandboxes, and Autonomous Agents).
+- Renamed `pipeline/07-workflow-git.md` to `pipeline/08-workflow-git.md`.
+- Updated stage listings in `pipeline/index.md`, `index.md`, `README.md`,
+  and `_data/videos.yml`.
+
+### Content for all 7 remaining topics (Phase D)
+Each topic: videos.yml entry (title, youtube_id, duration, substack_url,
+takeaways, resources), pipeline page (summary + include), content-notes
+(repo-only rich notes). All takeaways sourced from Paul's own sections.
+
+| # | Slug | Video ID | Duration | Takeaway source |
+|---|------|----------|----------|-----------------|
+| 01 | setup | HzgByl5ZsWE | 36:31 | "Tips for Getting Started" (4 tips, expanded to 5 bullets) |
+| 02 | data-analysis | Rp17XUPxa4I | 37:30 | "Summing up" (5 numbered points) |
+| 03 | scraping | wqLZrKdevHs | 27:46 | "A few things I've learned" (7 points, compressed to 6) |
+| 05 | writing | BxfSiB3Moyo | 46:39 | "Key takeaways" (6 numbered points) |
+| 06 | skills | a03ehomPqMA | 31:04 | Takeaways section (6 numbered points) |
+| 07 | permissions | 8Jnx5rL_Gfk | 47:47 | Takeaways section (6 numbered points) |
+| 08 | workflow-git | EcloxLPcRsY | 65:14 | Numbered recommendations (5 points) |
+
+All video IDs verified via YouTube oembed API. No em-dashes in any content.
+Page titles updated to match actual video titles in index.md and pipeline/index.md.
+
+### Flags for Paul
+- 8-stage restructure (permissions added as stage 7) is a proposal
+- hmda-pipeline and patent-data repos still 404
+- All summaries and takeaways are DRAFT, pending review
+- Video durations from YouTube metadata, not manually verified
+- Subscription pricing in 01-setup ($20/$100/$200) may be stale
+- Skills documentation URL may change as Anthropic updates docs
+
+**Tool:** Claude Code (Opus 4.6)
+
 ## 2026-07-09 — Portable pgp-writing-style skill fallback
 
 - Copied `pgp-writing-style` skill into the repo at `skills/pgp-writing-style/SKILL.md`
