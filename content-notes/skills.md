@@ -16,6 +16,14 @@ theoretical and empirical contributions. It also covers where skills live
 (user-global vs. project-local), Claude Code's built-in skills, the emerging
 marketplace, and two warnings about context consumption and third-party trust.
 
+## Tagline
+
+"A skill is just a markdown file; the leverage comes from standardizing workflows."
+
+**Source:** Compressed from takeaway 1 ("A skill is just instructions in a
+markdown file loaded into the context window; the leverage comes from
+standardizing recurring workflows").
+
 ## What you'll learn (from post's takeaways section)
 
 Paul provides six numbered takeaways. All preserved.

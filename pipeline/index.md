@@ -9,11 +9,13 @@ title: "The Pipeline"
 TODO: Brief framing paragraph — what the pipeline is and how to use it.
 </div>
 
-1. [Getting Started with Claude Code]({{ '/pipeline/01-setup' | relative_url }})
-2. [From an Empty Folder to a Figure]({{ '/pipeline/02-data-analysis' | relative_url }})
-3. [From EDGAR Filings to a Structured Database]({{ '/pipeline/03-scraping' | relative_url }})
-4. [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})
-5. [Writing and Thinking with AI]({{ '/pipeline/05-writing' | relative_url }})
-6. [Skills: Specifying How an Agent Should Think]({{ '/pipeline/06-skills' | relative_url }})
-7. [Permissions, Sandboxes, and Autonomous Agents]({{ '/pipeline/07-permissions' | relative_url }})
-8. [Integration and Collaboration]({{ '/pipeline/08-workflow-git' | relative_url }})
+{% assign slugs = "01-setup,02-data-analysis,03-scraping,04-large-data,05-writing,06-skills,07-permissions,08-workflow-git" | split: "," %}
+<ol class="pipeline-list">
+{% for slug in slugs %}
+{% assign video = site.data.videos[slug] %}
+<li>
+  <a href="{{ '/pipeline/' | append: slug | relative_url }}">{{ video.title }}</a>
+  <span class="pipeline-tagline">{{ video.tagline }}</span>
+</li>
+{% endfor %}
+</ol>

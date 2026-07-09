@@ -16,6 +16,13 @@ turns, and compares Claude Code's terminal workflow with Cowork's cloud
 alternative. The practical tips: be specific, iterate in small steps, correct
 early when Claude drifts, and always verify research code yourself.
 
+## Tagline
+
+"Installation, context window, and the habits that keep sessions productive."
+
+**Source:** Compressed from the 3-sentence summary (topics: subscription tier,
+terminal environment, context window, practical tips).
+
 ## What you'll learn (from post's "Tips for Getting Started")
 
 Paul lists four tips near the end. The live bullets expand slightly with context

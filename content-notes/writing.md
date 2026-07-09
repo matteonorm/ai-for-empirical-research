@@ -17,6 +17,13 @@ use the strategic-revision skill to turn referee reports into prioritized task
 lists, and ask for comments on your drafts rather than rewrites so you stay in
 the driver's seat.
 
+## Tagline
+
+"Writing is thinking: be deliberate about what you offload to the LLM."
+
+**Source:** Compressed from takeaway 1 ("Writing is thinking: be deliberate about
+what you offload versus what you do yourself").
+
 ## What you'll learn (from post's "Key takeaways" section)
 
 Paul provides six numbered takeaways. All preserved.

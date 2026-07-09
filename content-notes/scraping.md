@@ -16,6 +16,13 @@ workflow uses Claude Code's plan mode for upfront architecture, handles EDGAR's
 rate limits, and includes quality reports that catch parsing failures early
 (119 of 120 filings parsed after one fix cycle).
 
+## Tagline
+
+"Front-load context for scraping; let Claude ask you the design questions."
+
+**Source:** Compressed from takeaways 1 ("Front-load context for scraping tasks")
+and 2 ("Let Claude ask you questions about design decisions").
+
 ## What you'll learn (from post's "A few things I've learned")
 
 Paul provides seven numbered points. Live bullets compress to 6.

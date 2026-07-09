@@ -28,6 +28,12 @@ analysis of trends like the rise of fintech mortgage lenders.
 | 27:55 | Harmonizing 18 years of mortgage data              | unverified |
 | 42:01 | Fintech lender classification and market-share trends | unverified |
 
+## Tagline
+
+"Most applied economists are not great at working with big data."
+
+**Source:** Verbatim first sentence of the companion Substack post.
+
 ## What you'll learn (from post's numbered Takeaways section)
 
 Paul lists seven takeaways at the end of the post. The live bullets paraphrase

@@ -17,6 +17,14 @@ style guides you like (such as Kieran Healy's) instead of specifying every
 parameter, iterate in small steps, and always generate reproducible scripts
 rather than one-off outputs.
 
+## Tagline
+
+"From a research question to a publication-quality figure in one session."
+
+**Source:** Compressed from summary sentence 1 ("Starting from an empty folder,
+this video shows how to go from a research question... to a publication-quality
+figure in a single Claude Code session").
+
 ## What you'll learn (from post's "Summing up" section)
 
 Paul provides five numbered points in his "Summing up" section. Live bullets

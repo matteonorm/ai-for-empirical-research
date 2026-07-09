@@ -17,6 +17,13 @@ tight boundary. It also covers data governance (privacy filters for sensitive
 material, local models as a fallback) and long-running agent workflows like
 OpenClaw and how to set up your own personal research agent.
 
+## Tagline
+
+"The real lever is the environment, not the approval mode."
+
+**Source:** Compressed from takeaway 3 ("The real lever is the environment: mount
+only what you need, drop capabilities, use --network=none once setup is done").
+
 ## What you'll learn (from post's takeaways section)
 
 Paul provides six numbered takeaways. All preserved.

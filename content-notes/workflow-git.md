@@ -16,6 +16,13 @@ trail, branches for experiments), code review practices, routing feedback throug
 GitHub issues, and wiring results directly into LaTeX drafts via Overleaf so no
 number is ever hand-typed.
 
+## Tagline
+
+"AI makes producing code cheap; verifying it is the expensive part."
+
+**Source:** Compressed from summary sentence 1 ("AI tools make it cheap to
+produce code, but verifying that code is correct remains expensive").
+
 ## What you'll learn (from post's numbered recommendations)
 
 Paul provides five numbered recommendations at the end. All preserved, with

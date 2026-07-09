@@ -82,6 +82,13 @@ section > h3:not(:first-of-type) {
   margin-bottom: 0.5rem;
 }
 
+.pipeline-tagline {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+
 p, ul, ol { margin-bottom: 0.75rem; }
 li { margin: 0.5rem 0; line-height: 1.6; }
 li li { margin: 0.25rem 0; }

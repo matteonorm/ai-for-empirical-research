@@ -3,6 +3,15 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Sourced pipeline taglines
+
+- Added `tagline` field to each of the 8 entries in `_data/videos.yml`.
+- `pipeline/index.md` now loops over video data to render title + tagline for
+  each stage (no hand-written list).
+- Added `.pipeline-tagline` CSS rule for muted styling beneath each link.
+- Each tagline mirrored into `content-notes/<slug>.md` with its source
+  (post first sentence, takeaway, or summary compression).
+
 ## 2026-07-09 — Batch content, 8-stage restructure, heading fix
 
 ### Branch rename
