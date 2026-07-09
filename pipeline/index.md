@@ -5,10 +5,6 @@ title: "The Pipeline"
 
 ### Video walkthroughs for every stage of an empirical project
 
-<div class="todo-placeholder">
-TODO: Brief framing paragraph — what the pipeline is and how to use it.
-</div>
-
 {% assign slugs = "01-setup,02-data-analysis,03-scraping,04-large-data,05-writing,06-skills,07-permissions,08-workflow-git" | split: "," %}
 <ol class="pipeline-list">
 {% for slug in slugs %}

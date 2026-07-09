@@ -3,6 +3,12 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Remove pipeline and Start Here TODO placeholders
+
+- Removed the yellow TODO framing-paragraph placeholders from
+  `pipeline/index.md` and `start-here/index.md`. The subtitle and list
+  follow the heading directly.
+
 ## 2026-07-09 — New-to-AI linked path + track graduation end-states
 
 Two commits:
