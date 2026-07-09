@@ -25,7 +25,7 @@ Pick your track:
 - [From EDGAR Filings to a Structured Database]({{ '/pipeline/03-scraping' | relative_url }})
 - [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})
 - [Writing and Thinking with AI]({{ '/pipeline/05-writing' | relative_url }})
-- [Building Skills]({{ '/pipeline/06-skills' | relative_url }})
+- [Skills: How an Agent Should Think]({{ '/pipeline/06-skills' | relative_url }})
 - [Permissions & Sandboxes]({{ '/pipeline/07-permissions' | relative_url }})
 - [Workflow & Git]({{ '/pipeline/08-workflow-git' | relative_url }})
 

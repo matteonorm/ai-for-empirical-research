@@ -14,6 +14,6 @@ TODO: Brief framing paragraph — what the pipeline is and how to use it.
 3. [From EDGAR Filings to a Structured Database]({{ '/pipeline/03-scraping' | relative_url }})
 4. [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})
 5. [Writing and Thinking with AI]({{ '/pipeline/05-writing' | relative_url }})
-6. [Building AI Skills]({{ '/pipeline/06-skills' | relative_url }})
+6. [Skills: Specifying How an Agent Should Think]({{ '/pipeline/06-skills' | relative_url }})
 7. [Permissions, Sandboxes, and Autonomous Agents]({{ '/pipeline/07-permissions' | relative_url }})
 8. [Workflow & Git]({{ '/pipeline/08-workflow-git' | relative_url }})
