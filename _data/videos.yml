@@ -33,11 +33,11 @@
   description: ""
   substack_url: "https://paulgp.substack.com/p/large-datasets-and-structured-databases"
   takeaways:
-    - "How to turn a large, messy administrative dataset into a clean, documented, queryable database using Claude Code"
-    - "Converting CSVs to Parquet for 15x compression and using DuckDB to query data too large for memory"
-    - "Building metadata tables as 'context engineering for data': self-documenting datasets that preserve context across sessions"
-    - "Using Claude Code's planning mode to design the architecture before writing any code"
-    - "A generalizable pattern (download → convert → harmonize → document → query → analyze) that applies to HMDA, Medicare claims, patent filings, and other large administrative datasets"
+    - "Turn a large, messy administrative dataset into a clean, documented, queryable database with Claude Code"
+    - "Convert CSVs to Parquet (15x compression) and query them with DuckDB without loading everything into memory"
+    - "Build metadata tables as 'context engineering for data,' making datasets self-documenting across sessions and collaborators"
+    - "Use Claude Code's planning mode to design the pipeline architecture before writing any code"
+    - "Apply a generalizable pattern (download, convert, harmonize, document, query, analyze) to HMDA, Medicare claims, patent filings, and other large administrative datasets"
   resources:
     - title: "HMDA Data (Consumer Financial Protection Bureau)"
       url: "https://www.consumerfinance.gov/data-research/hmda/"

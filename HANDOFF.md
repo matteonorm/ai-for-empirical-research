@@ -65,14 +65,19 @@ That's it — all links use `relative_url`, so no other changes needed.
 - `_plugins/pdf_scanner.rb` — PDF gallery generator
 - `assets/css/blog.css`, `assets/css/github-light.css`, `assets/css/jekyll-code-style.css` — blog/code styling
 
-## Writing style rule
+## Writing style
 
-Never use the em-dash in site content or content-notes prose. It is a common
-AI-writing tell, and Paul applies the same standard in his editing. Rewrite
-with commas, colons, parentheses, or separate sentences. Applies to prose
-only, not to hyphens in compound words, filenames, or numeric ranges.
+**Voice:** The `pgp-writing-style` skill is used as a voice reference only, not
+for its paper-specific machinery (numbered assumptions, propositions, roadmaps,
+footnote citations). This is short web/curation copy matching Paul's
+Substack/blog register: problem-first, active, concrete, non-overclaiming.
 
-The enforceable rule is in `CLAUDE.md` under "Writing style."
+**No em-dashes:** Em-dashes are a common AI-writing tell; we strip them from
+AI-drafted copy. Note: Paul uses em-dashes freely in his own writing (the skill
+documents this). The rule targets AI-generated prose specifically, not Paul's
+style. The no-em-dash rule takes precedence over the skill's em-dash guidance.
+
+The enforceable rules are in `CLAUDE.md` under "Writing style."
 
 ## Deviations from docs/PLAN.md
 
@@ -151,16 +156,16 @@ Each entry in `_data/videos.yml` is keyed by the pipeline page slug and has thes
   description: ""                                     # leave empty; summary lives in page .md
   substack_url: "https://paulgp.substack.com/p/..."   # companion post
   resources:                                          # renders as a bullet list
-    - title: "HMDA Data — CFPB"
+    - title: "HMDA Data (CFPB)"
       url: "https://www.consumerfinance.gov/..."
 ```
 
 The include (`_includes/video_page.html`) reads: `title`, `youtube_id`, `duration`,
 `description`, `substack_url`, `takeaways` (list of strings), and `resources`
-(list of `{url, title}`). There is no `timestamps` field — timestamps are captured
+(list of `{url, title}`). There is no `timestamps` field; timestamps are captured
 in `content-notes/` only (see below).
 
-**`takeaways` (proposed — pending Paul's approval for all pages):** An optional list
+**`takeaways` (proposed, pending Paul's approval for all pages):** An optional list
 of strings rendered as a "What you'll learn" bulleted list after the title and before
 the video embed. Renders nothing if absent or empty. Currently populated only for
 04-large-data as a pilot. Sourced from the companion post's own framing, not invented.
@@ -170,7 +175,7 @@ Do not roll out to other pages until Paul reviews the format.
 
 `content-notes/` holds repo-only working material for Phase 2 content:
 - Sources (post, video, repos)
-- Draft summaries marked "DRAFT — pending Paul"
+- Draft summaries marked "DRAFT, pending Paul"
 - Timestamps (from Markus Academy listings, marked verified/unverified)
 - Application notes (not published)
 - Resource superset (including academic refs not in the live resources list)
@@ -181,8 +186,8 @@ Excluded from the Jekyll build via `_config.yml`. Never published or linked from
 ## Video-ID resolution (04-large-data)
 
 `list_of_links.rtf` listed the same YouTube ID (`wqLZrKdevHs`) for both:
-- 03-scraping (EDGAR) — **correct** (Markus Academy Ep. 162-3)
-- 04-large-data — **copy error**
+- 03-scraping (EDGAR): **correct** (Markus Academy Ep. 162-3)
+- 04-large-data: **copy error**
 
 The correct large-data ID is `4uwI1-9DafU` (Markus Academy Ep. 162-4), confirmed via:
 1. YouTube search for "Markus Academy Paul Goldsmith-Pinkham Large Datasets"

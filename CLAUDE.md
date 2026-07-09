@@ -33,10 +33,26 @@ Example: `{{ '/assets/css/styles.css' | relative_url }}`
 
 ## Writing style
 
-Never use the em-dash in site content or content-notes prose. It is a common
-AI-writing tell, and Paul applies the same standard in his editing. Rewrite
-with commas, colons, parentheses, or separate sentences. Applies to prose
-only, not to hyphens in compound words, filenames, or numeric ranges.
+**Voice:** Site content and content-notes prose should read in Paul
+Goldsmith-Pinkham's voice. Use the `pgp-writing-style` skill as a voice
+reference only, not its paper-specific machinery. This is short web/curation
+copy, not an academic paper.
+
+- YES: problem/practical-first framing; active, direct sentences ("shows",
+  "builds", not "it is shown that"); concrete specifics; generous credit;
+  careful, non-overclaiming statements.
+- NO: numbered/named assumptions, propositions, roadmaps, footnote citations,
+  section scaffolding. None of that belongs in a video summary.
+- Register: match Paul's Substack/blog voice (the source posts), which is more
+  casual than his papers. Paraphrase closely from his own phrasing in the post.
+
+**No em-dashes:** Never use the em-dash in site content or content-notes prose.
+Em-dashes are a common AI-writing tell; we strip them from AI-drafted copy.
+Rewrite with commas, colons, parentheses, or separate sentences. Applies to
+prose only, not to hyphens in compound words, filenames, or numeric ranges.
+This rule OVERRIDES the `pgp-writing-style` skill's em-dash guidance. Paul
+uses em-dashes in his own writing, but they read as an AI tell in our
+AI-drafted copy.
 
 ## No content invention
 
