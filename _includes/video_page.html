@@ -44,6 +44,8 @@
     {% endfor %}
   </ul>
   {% endif %}
+
+  {% include pipeline_nav.html %}
 </div>
 {% else %}
 <div class="todo-placeholder">TODO: No video data found for key "{{ page.video_key }}". Check _data/videos.yml.</div>
