@@ -3,6 +3,12 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Simplify compression diagram caption
+
+- Replaced the two-line caption (grey "After Paul Goldsmith-Pinkham," prefix +
+  separate linked title) with a cleaner layout: the sentence on its own line,
+  then the post title as a single orange link. No grey prefix.
+
 ## 2026-07-09 — Landing page: compression framing, native diagram, econ-lit evidence
 
 - Rewrote landing page framing around the "timeline compression" thesis (drawn

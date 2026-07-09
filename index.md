@@ -17,7 +17,7 @@ It is already happening. Mentions of large language models in the economics lite
 
 {% include econlit_chart.html %}
 
-<p class="chart-caption">Share of papers in top economics journals mentioning LLMs, 2011 to 2025. As of July 2026, from Paul Goldsmith-Pinkham's <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">econ-lit search pipeline ↗</a>.</p>
+<p class="chart-caption">Share of papers in top economics journals mentioning LLMs, 2011 to 2025. As of July 2026, from the <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">econ-lit search pipeline ↗</a>.</p>
 
 <p class="chart-download"><a href="{{ '/assets/data/econlit-papers.csv' | relative_url }}" download>Download the matching papers (CSV)</a></p>
 
