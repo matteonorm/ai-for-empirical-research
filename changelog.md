@@ -3,6 +3,14 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Add Practical Guide as New-to-AI further reading
+
+- Added "Using AI in Research and Teaching: A Practical Guide" (Paul's 2024
+  talk page) as a `further_reading` item on the New-to-AI track. Opens in a
+  new tab with the external marker. Not part of the sequential path or the
+  `?track=` chain. Flagged as pre-Claude-Code background, pending Paul's
+  view on whether to keep it.
+
 ## 2026-07-09 — Per-track closing lines matching the graduation ladder
 
 - Each track page now ends with a closing line pointing to the next track up

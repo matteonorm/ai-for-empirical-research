@@ -178,9 +178,14 @@ phrasing (in Paul's voice, not sourced from posts), pending Paul's review.
 
 | Track | Title | URL | Source |
 |-------|-------|-----|--------|
+| new-to-ai | Using AI in Research and Teaching: A Practical Guide | `https://paulgp.com/2024/06/24/llm_talk.html` | paulgp.com |
 | casual-user | AI and the Research O-Ring | `https://paulgp.substack.com/p/ai-and-the-research-o-ring` | Substack |
 | power-user | llms.txt for Academic Papers | `https://paulgp.com/2026/03/10/llms-txt-for-academic-papers.html` | paulgp.com |
 | power-user | AI One-Shot Papers | `https://paulgp.com/2026/03/21/ai-oneshot-papers.html` | paulgp.com |
+
+The New-to-AI practical guide is Paul's 2024 pre-Claude-Code talk page (Copilot,
+ChatGPT, Claude for coding/data/teaching). Flagged as background material,
+pending Paul's view on whether to keep it alongside the Claude Code pipeline.
 
 ### O-Ring label (flagged for Paul)
 
