@@ -11,12 +11,21 @@ track_key: "casual-user"
 <ol class="track-path">
 {% for step in track.path %}
 <li>
-  {% if step.external %}
-  <a href="{{ step.url }}" target="_blank" rel="noopener noreferrer">{{ step.title }} ↗</a>
-  {% else %}
   <a href="{{ step.url | relative_url }}?track={{ page.track_key }}">{{ step.title }}</a>
-  {% endif %}
   <span class="track-why">{{ step.why }}</span>
 </li>
 {% endfor %}
 </ol>
+
+{% if track.further_reading.size > 0 %}
+### Further reading
+
+<ul class="track-further-reading">
+{% for item in track.further_reading %}
+<li>
+  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }} ↗</a>
+  <span class="track-why">{{ item.why }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}

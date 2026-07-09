@@ -202,24 +202,27 @@ Four mechanisms added in separate commits:
 
 2. **External link policy**: all off-site links have `target="_blank"
    rel="noopener noreferrer"` and a ↗ glyph. Internal links navigate normally
-   with no marker. Applied to track path items and all Elsewhere links.
+   with no marker. Applied to track Further reading items and all Elsewhere links.
 
 3. **Track back-banner** (`?track=` param): client-side JavaScript reads
-   `?track=<key>` from the URL. If present, renders a banner at the top of the
-   pipeline page: "← Back to <Track>" + "Next in this track: <title> →".
-   On the last internal item, the banner shows a **graduation end-state**:
-   tracks with a `next_track` field in `tracks.yml` link to the next track up
-   the ladder ("Ready to become a Casual User →" / "Ready to become a Power
-   User →"). Power User (top of the ladder) shows only the back link. The
-   "last item" is the last internal path item, skipping external links.
-   No banner without the param; static pages work fully without it.
-   Track data delivered as jsonified `tracks.yml`. Script guarded to pages with
-   `page.video_key` only.
+   `?track=<key>` from the URL. When present, the banner shows and the static
+   pipeline prev/next is hidden (context-swap: one nav at a time). Banner
+   layout: back link on one line, forward action on the next. On the last
+   path item, the banner shows a **graduation end-state**: tracks with a
+   `next_track` field in `tracks.yml` link to the next track up the ladder
+   ("Ready to become a Casual User →" / "Ready to become a Power User →").
+   Power User (top of the ladder) shows only the back link. No banner without
+   the param; static pages show pipeline prev/next as normal. Track data
+   delivered as jsonified `tracks.yml` via data- attributes (inside
+   `{% raw %}` to prevent kramdown curly-quote corruption). Script guarded
+   to pages with `page.video_key` only.
 
 4. **All tracks are linked paths**: all three track pages (new-to-ai,
    casual-user, power-user) are structurally identical: framing paragraph,
-   ordered path with `?track=` links, and closing. The New-to-AI inline embed
-   approach was reverted in favor of consistency.
+   numbered sequential path (internal items only, with `?track=` links),
+   optional "Further reading" subsection (external links, new tab, ↗ marker,
+   not in the `?track=` chain), and optional closing. External links in
+   `tracks.yml` live under `further_reading`, not `path`.
 
 ## Local dev setup
 

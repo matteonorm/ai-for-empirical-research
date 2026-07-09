@@ -3,6 +3,23 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Navigation fixes: context-swap, banner layout, Further reading
+
+Two commits:
+
+1. **Banner OR prev/next, never both**: when `?track=` is present, the track
+   banner shows and the static pipeline prev/next is hidden via JS. Without
+   the param, prev/next shows normally (no banner). Banner layout fixed: back
+   link and forward action now stack on separate lines instead of running
+   together on one line.
+
+2. **External links become Further reading**: track `path` arrays now contain
+   only internal pipeline pages. External links (O-Ring, llms.txt, One-Shot)
+   moved to a `further_reading` list in `tracks.yml`, rendered as a separate
+   "Further reading" subsection on each track page (new tab, ↗ marker). They
+   are not numbered steps and never appear as "next in track" targets.
+   Graduation fires after the last internal item.
+
 ## 2026-07-09 — Remove pipeline and Start Here TODO placeholders
 
 - Removed the yellow TODO framing-paragraph placeholders from

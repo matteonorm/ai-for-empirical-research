@@ -30,9 +30,9 @@ casual-user:
     - title: "Writing and Thinking with AI Assistance"
       url: "/pipeline/05-writing"
       why: "Enhance your writing with Claude while keeping your own voice."
+  further_reading:
     - title: "AI and the Research O-Ring"
       url: "https://paulgp.substack.com/p/ai-and-the-research-o-ring"
-      external: true
       why: "Why it’s worth going deeper."
 
 power-user:
@@ -53,11 +53,10 @@ power-user:
     - title: "Restricted Data"
       url: "/restricted-data"
       why: "Working with data an agent can’t touch: RDCs, credit-bureau, PII."
+  further_reading:
     - title: "llms.txt for Academic Papers"
       url: "https://paulgp.com/2026/03/10/llms-txt-for-academic-papers.html"
-      external: true
       why: "Make your papers machine-readable for AI tools."
     - title: "AI One-Shot Papers"
       url: "https://paulgp.com/2026/03/21/ai-oneshot-papers.html"
-      external: true
       why: "How far one-shot generation can and can’t go."
