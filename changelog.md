@@ -3,6 +3,31 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — UX/path navigation (4 commits)
+
+Four navigation mechanisms, each in its own commit:
+
+1. **Pipeline prev/next** (`_includes/pipeline_nav.html`): auto-included via
+   `video_page.html`. Stage 01 shows next only, stage 08 shows prev only,
+   middle stages show both. Labels display the destination title with arrows.
+
+2. **External links open in new tab**: all off-site links get
+   `target="_blank" rel="noopener noreferrer"` and a ↗ glyph. Applied to
+   track path items (casual-user, power-user) and all Elsewhere links.
+
+3. **Track back-banner** (`?track=` param): client-side JS reads the param
+   and renders a banner ("← Back to Track" / "Next in this track → " /
+   "You've finished the track ↩"). Triggers "finished" after the last
+   internal item, skipping external links. No banner without the param;
+   static pages work fully without it. Script guarded to `page.video_key`
+   pages only.
+
+4. **New-to-AI inline videos**: embeds 01-setup and 02-data-analysis inline
+   via `include.video_key` override. No out-links, no pipeline nav. Closing
+   links to the full pipeline.
+
+CSS additions: `.pipeline-nav`, `.pipeline-nav-next`, `.track-banner`.
+
 ## 2026-07-09 — Elsewhere: notable sessions + neutral pgp-voice descriptions
 
 - Added four Markus' Academy sessions as a `sessions` sub-list (Bryan, Golub,

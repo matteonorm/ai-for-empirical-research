@@ -191,6 +191,34 @@ bottlenecks in downstream tasks are amplified rather than relieved. This is a
 structural warning, not encouragement. The label is kept as Matteo's editorial
 choice, pending Paul's review of whether it matches his intent for this track.
 
+## UX/path navigation
+
+Four mechanisms added in separate commits:
+
+1. **Pipeline prev/next** (`_includes/pipeline_nav.html`): driven by the stage
+   slug list, auto-included at the bottom of `video_page.html`. Stage 01: next
+   only. Stage 08: prev only. All others: both. Shows destination title with
+   arrow.
+
+2. **External link policy**: all off-site links have `target="_blank"
+   rel="noopener noreferrer"` and a ↗ glyph. Internal links navigate normally
+   with no marker. Applied to track path items and all Elsewhere links.
+
+3. **Track back-banner** (`?track=` param): client-side JavaScript reads
+   `?track=<key>` from the URL. If present, renders a banner at the top of the
+   pipeline page: "← Back to <Track>" + "Next in this track: <title> →" (or
+   "You've finished the <Track> track ↩" on the last internal item). The
+   "finished" state triggers after the last internal item, skipping external
+   links. No banner without the param; static pages work fully without it.
+   Track data delivered as jsonified `tracks.yml`. Script guarded to pages with
+   `page.video_key` only.
+
+4. **New-to-AI inline videos**: the New-to-AI track page embeds both videos
+   (01-setup, 02-data-analysis) inline via `include.video_key` override. No
+   out-links, no pipeline nav (no `page.video_key`). Framing paragraph and
+   closing ("the full pipeline covers the rest") retained. Other tracks keep
+   their link-based paths with `?track=` behavior.
+
 ## Local dev setup
 
 ### Prerequisites
