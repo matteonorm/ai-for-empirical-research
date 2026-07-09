@@ -3,6 +3,18 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Drop external marker on Paul's own domains
+
+- Three-tier link rule: internal (same tab, no marker), Paul's domains (new tab,
+  no ↗), third-party (new tab, ↗). Paul's content should not read as "leaving to
+  an external site."
+- `paul_domains` list in `_config.yml`: `paulgp.com`, `paulgp.substack.com`.
+  Data-driven templates (track pages, elsewhere) check `site.paul_domains` via
+  Liquid. Hardcoded links updated manually.
+- Swept: landing page (diagram caption, chart caption), pipeline Substack links
+  (now open in new tab), all three track Further reading sections, Elsewhere.
+- Rule documented in CLAUDE.md under "Links and URLs."
+
 ## 2026-07-09 — Landing page: final arc (framing, diagram, adoption, chart, CTA)
 
 - Rewrote landing page to its final structure: compression framing (two paragraphs),

@@ -15,10 +15,6 @@ Large language models are now part of the conversation in economics. Mentions of
 
 {% include econlit_chart.html %}
 
-<p class="chart-caption">Share of papers in top economics journals mentioning LLMs, 2011 to 2025. As of July 2026, from Paul Goldsmith-Pinkham's <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">econ-lit search pipeline ↗</a>.</p>
-
-<p class="chart-download"><a href="{{ '/assets/data/econlit-papers.csv' | relative_url }}" download>Download the matching papers (CSV)</a></p>
-
-<p class="chart-caption">The search covers 41,000+ papers with full text; this file is the subset that mention LLMs.</p>
+<p class="chart-caption">Share of papers in top economics journals mentioning LLMs, 2011 to 2025. As of July 2026, from the <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">econ-lit search pipeline</a>. <a href="{{ '/assets/data/econlit-papers.csv' | relative_url }}" download>Download the underlying papers.</a></p>
 
 This site is a practical guide to that shift across the research cycle, from sharpening an idea to assembling data, running the analysis, drafting the paper, and answering referees, where these tools can genuinely move the work forward. When you're ready, <a href="{{ '/start-here/' | relative_url }}">pick your track and start</a>.

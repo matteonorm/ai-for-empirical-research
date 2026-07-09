@@ -23,7 +23,7 @@ track_key: "power-user"
 <ul class="track-further-reading">
 {% for item in track.further_reading %}
 <li>
-  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }} ↗</a>
+  {% assign is_paul = false %}{% for d in site.paul_domains %}{% if item.url contains d %}{% assign is_paul = true %}{% endif %}{% endfor %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}{% unless is_paul %} ↗{% endunless %}</a>
   <span class="track-why">{{ item.why }}</span>
 </li>
 {% endfor %}

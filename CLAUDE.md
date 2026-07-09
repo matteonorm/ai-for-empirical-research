@@ -36,6 +36,24 @@ subdomain; hardcoded leading-slash paths will break one of these.
 
 Example: `{{ '/assets/css/styles.css' | relative_url }}`
 
+**Three-tier external link rule:**
+
+| Destination | Tab | ↗ marker |
+|---|---|---|
+| This site's own pages | Same tab | No |
+| Paul's own domains (`paulgp.com`, `paulgp.substack.com`) | New tab | **No** |
+| Third-party domains (everything else) | New tab | Yes |
+
+Paul's content should not read as "leaving to an external site." All off-site
+links still open in a new tab (`target="_blank" rel="noopener noreferrer"`);
+the only difference is whether the ↗ glyph appears.
+
+The list of Paul's domains lives in `_config.yml` under `paul_domains`. Data-driven
+templates (track pages, elsewhere) check `site.paul_domains` with a Liquid loop to
+decide the marker. Hardcoded links in includes and pages apply the rule manually.
+This is kept separate from "this site" so it behaves correctly after migration to
+`ai.paulgp.com`.
+
 ## Writing style
 
 **Voice:** Site content and content-notes prose should read in Paul
