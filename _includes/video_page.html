@@ -75,13 +75,14 @@
   var banner = document.createElement('div');
   banner.className = 'track-banner';
 
-  var backLink = '<a href="' + baseUrl + track.url + '">&larr; Back to ' + track.title + '</a>';
-  var nextPart = '';
+  var backLink = ‘<a href="’ + baseUrl + track.url + ‘">&larr; Back to ‘ + track.title + ‘</a>’;
+  var nextPart = ‘’;
   if (idx < internalItems.length - 1) {
     var next = internalItems[idx + 1];
-    nextPart = '<a href="' + baseUrl + next.url + '?track=' + trackKey + '">Next in this track: ' + next.title + ' &rarr;</a>';
-  } else {
-    nextPart = '<a href="' + baseUrl + track.url + '">You’ve finished the ' + track.title + ' track ↩</a>';
+    nextPart = ‘<a href="’ + baseUrl + next.url + ‘?track=’ + trackKey + ‘">Next in this track: ‘ + next.title + ‘ &rarr;</a>’;
+  } else if (track.next_track && defined_tracks[track.next_track]) {
+    var grad = defined_tracks[track.next_track];
+    nextPart = ‘<a href="’ + baseUrl + grad.url + ‘">You’ve got everything here! Ready to become a ‘ + grad.title + ‘ &rarr;</a>’;
   }
 
   banner.innerHTML = '<span>' + backLink + '</span><span>' + nextPart + '</span>';

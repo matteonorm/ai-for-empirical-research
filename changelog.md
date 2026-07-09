@@ -3,6 +3,21 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — New-to-AI linked path + track graduation end-states
+
+Two commits:
+
+1. **New-to-AI as a linked path**: reverted the inline video embeds. New-to-AI
+   now renders as a link-based path identical to Casual and Power (framing,
+   ordered links with `?track=new-to-ai`, closing). All three tracks are
+   structurally consistent.
+
+2. **Track graduation end-states**: the `?track=` back-banner's last-item state
+   now points to the next track up the ladder instead of a generic "finished"
+   message. New to AI graduates to Casual User, Casual to Power User. Power
+   User (top of the ladder) shows only the back link. Driven by a `next_track`
+   field in `tracks.yml`.
+
 ## 2026-07-09 — Elsewhere: update Sant'Anna URL/description and Blattman title
 
 - Sant'Anna: changed URL from GitHub repo to `psantanna.com/claude-code-my-workflow/`;

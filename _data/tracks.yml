@@ -2,6 +2,7 @@ new-to-ai:
   title: "New to AI"
   url: "/start-here/new-to-ai"
   tagline: "Never used AI tools in research before."
+  next_track: "casual-user"
   framing: "New to these tools? Start here. You don’t need to be a programmer, and you don’t need to overhaul how you work. Get a working setup, get one real result, and build from there."
   path:
     - title: "Getting Started with Claude Code"
@@ -17,6 +18,7 @@ casual-user:
   title: "Casual User"
   url: "/start-here/casual-user"
   tagline: "You’ve used ChatGPT or similar and want to go deeper."
+  next_track: "power-user"
   framing: "You already use AI for bits and pieces. The gap is seeing what changes when you point it at real research work instead of a chat window. Pick the task closest to what you do."
   path:
     - title: "From EDGAR Filings to a Structured Database"

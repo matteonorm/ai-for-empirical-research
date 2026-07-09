@@ -206,18 +206,20 @@ Four mechanisms added in separate commits:
 
 3. **Track back-banner** (`?track=` param): client-side JavaScript reads
    `?track=<key>` from the URL. If present, renders a banner at the top of the
-   pipeline page: "← Back to <Track>" + "Next in this track: <title> →" (or
-   "You've finished the <Track> track ↩" on the last internal item). The
-   "finished" state triggers after the last internal item, skipping external
-   links. No banner without the param; static pages work fully without it.
+   pipeline page: "← Back to <Track>" + "Next in this track: <title> →".
+   On the last internal item, the banner shows a **graduation end-state**:
+   tracks with a `next_track` field in `tracks.yml` link to the next track up
+   the ladder ("Ready to become a Casual User →" / "Ready to become a Power
+   User →"). Power User (top of the ladder) shows only the back link. The
+   "last item" is the last internal path item, skipping external links.
+   No banner without the param; static pages work fully without it.
    Track data delivered as jsonified `tracks.yml`. Script guarded to pages with
    `page.video_key` only.
 
-4. **New-to-AI inline videos**: the New-to-AI track page embeds both videos
-   (01-setup, 02-data-analysis) inline via `include.video_key` override. No
-   out-links, no pipeline nav (no `page.video_key`). Framing paragraph and
-   closing ("the full pipeline covers the rest") retained. Other tracks keep
-   their link-based paths with `?track=` behavior.
+4. **All tracks are linked paths**: all three track pages (new-to-ai,
+   casual-user, power-user) are structurally identical: framing paragraph,
+   ordered path with `?track=` links, and closing. The New-to-AI inline embed
+   approach was reverted in favor of consistency.
 
 ## Local dev setup
 
