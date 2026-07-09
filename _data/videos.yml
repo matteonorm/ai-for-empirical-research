@@ -46,7 +46,7 @@
 
 03-scraping:
   title: "From EDGAR Filings to a Structured Database"
-  tagline: "Front-load context for scraping; let Claude ask you the design questions."
+  tagline: "Scraping filings to build datasets for new research lines."
   youtube_id: "wqLZrKdevHs"
   duration: "27:46"
   description: ""
@@ -68,7 +68,7 @@
 
 04-large-data:
   title: "Large Datasets and Structured Databases"
-  tagline: "Most applied economists are not great at working with big data."
+  tagline: "Leveraging Claude to turn unwieldy big data into a queryable database."
   youtube_id: "4uwI1-9DafU"
   duration: "55:30"
   description: ""
@@ -90,7 +90,7 @@
 
 05-writing:
   title: "Writing and Thinking with AI Assistance"
-  tagline: "Writing is thinking: be deliberate about what you offload to the LLM."
+  tagline: "Enhance your writing with Claude while keeping your own voice."
   youtube_id: "BxfSiB3Moyo"
   duration: "46:39"
   description: ""
@@ -112,7 +112,7 @@
 
 06-skills:
   title: "Skills: Specifying How an Agent Should Think"
-  tagline: "A skill is just a markdown file; the leverage comes from standardizing workflows."
+  tagline: "Standardize your workflows with reusable Claude skills."
   youtube_id: "a03ehomPqMA"
   duration: "31:04"
   description: ""
@@ -134,7 +134,7 @@
 
 07-permissions:
   title: "Permissions, Sandboxes, and Autonomous Agents"
-  tagline: "The real lever is the environment, not the approval mode."
+  tagline: "Defining the environment an agentic AI works in."
   youtube_id: "8Jnx5rL_Gfk"
   duration: "47:47"
   description: ""
@@ -156,7 +156,7 @@
 
 08-workflow-git:
   title: "Integration and Collaboration in AI Research Work"
-  tagline: "AI makes producing code cheap; verifying it is the expensive part."
+  tagline: "What to do after the agent hands you a finished-looking result."
   youtube_id: "EcloxLPcRsY"
   duration: "65:14"
   description: ""

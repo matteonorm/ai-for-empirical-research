@@ -127,6 +127,12 @@ All content is DRAFT, pending Paul's review. No em-dashes in any prose.
 - **patent-data** (https://github.com/paulgp/patent-data): still 404
 - All other referenced repos verified 200 as of 2026-07-09
 
+## Pipeline taglines
+
+The `tagline` field on each `videos.yml` entry is Matteo's editorial phrasing
+(written in Paul's voice, not sourced from the companion posts). These are
+rendered on `pipeline/index.md` via a data-driven loop. Pending Paul's review.
+
 ## Local dev setup
 
 ### Prerequisites

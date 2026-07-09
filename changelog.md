@@ -3,6 +3,13 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Dictated pipeline taglines
+
+- Replaced auto-sourced taglines with Matteo's editorial one-liners (in Paul's
+  voice). Placed verbatim in `_data/videos.yml`; rendered via the existing
+  data-driven loop in `pipeline/index.md`. Noted in HANDOFF.md as pending
+  Paul's review.
+
 ## 2026-07-09 — Sourced pipeline taglines
 
 - Added `tagline` field to each of the 8 entries in `_data/videos.yml`.
