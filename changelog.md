@@ -3,6 +3,14 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Portable pgp-writing-style skill fallback
+
+- Copied `pgp-writing-style` skill into the repo at `skills/pgp-writing-style/SKILL.md`
+  so collaborators without the global skill installed can still follow the voice rule.
+- Updated CLAUDE.md: use global skill if available, otherwise read the repo-local copy.
+- Added `skills/pgp-writing-style/` to `_config.yml` exclude list and CLAUDE.md
+  "Excluded from the site" section.
+
 ## 2026-07-09 — Re-derive takeaways from Paul's numbered list
 
 - Replaced 5 takeaway bullets with 6 derived directly from Paul's seven numbered

@@ -24,3 +24,4 @@ exclude:
   - README.md
   - changelog.md
   - content-notes/
+  - skills/pgp-writing-style/

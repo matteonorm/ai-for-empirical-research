@@ -36,7 +36,10 @@ Example: `{{ '/assets/css/styles.css' | relative_url }}`
 **Voice:** Site content and content-notes prose should read in Paul
 Goldsmith-Pinkham's voice. Use the `pgp-writing-style` skill as a voice
 reference only, not its paper-specific machinery. This is short web/curation
-copy, not an academic paper.
+copy, not an academic paper. If the installed/global `pgp-writing-style` skill
+is available, use it. Otherwise, read and follow the repo-local fallback at
+`skills/pgp-writing-style/SKILL.md`. Never skip the voice check just because
+the global skill isn't found.
 
 - YES: problem/practical-first framing; active, direct sentences ("shows",
   "builds", not "it is shown that"); concrete specifics; generous credit;
@@ -80,6 +83,7 @@ They must NOT be re-published or re-linked from any site page.
 - `docs/PLAN.md`: Paul's canonical spec, repo-only
 - `HANDOFF.md`, `CLAUDE.md`, `README.md`
 - `content-notes/`: repo-only working material for Phase 2 content drafts (sources, timestamps, application notes, flags for Paul); never published or linked from site pages
+- `skills/pgp-writing-style/`: portable fallback copy of the writing-voice skill; used by Claude Code, not a site page
 
 ## Key files
 
