@@ -3,6 +3,12 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Remove duplicate title heading from video_page include
+
+- Removed `<h2>{{ video.title }}</h2>` from `_includes/video_page.html`. The page
+  already renders its title from the front matter `title:` field, so the include's
+  heading was a duplicate. The `title` field stays in `_data/videos.yml` for data use.
+
 ## 2026-07-09 — 04-large-data: "What you'll learn" + title fix
 
 - **`_includes/video_page.html`**: added conditional `takeaways` block — renders
