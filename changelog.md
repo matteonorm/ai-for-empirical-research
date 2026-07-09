@@ -3,6 +3,14 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Content merged to main; site live
+
+- Merged `content` branch into `main` with `--no-ff`. All V1 content now
+  deployed via GitHub Pages.
+- Consolidated scattered "pending Paul" flags into a single "Awaiting Paul's
+  review" section in HANDOFF.md.
+- Updated README.md with current status, repo layout, and continuation prompt.
+
 ## 2026-07-09 — Drop external marker on Paul's own domains
 
 - Three-tier link rule: internal (same tab, no marker), Paul's domains (new tab,

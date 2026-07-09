@@ -1,9 +1,59 @@
 # HANDOFF — Decision Log & Current State
 
 **Date:** 2026-07-09
-**Phase:** 2 (content — all 8 pipeline topics populated)
+**Status:** Content merged to main; site live at `matteonorm.github.io/ai-for-empirical-research`
 **Canonical spec:** `docs/PLAN.md`
 **Repo conventions:** `CLAUDE.md`
+
+## Awaiting Paul's review
+
+Everything below is Matteo's editorial work in Paul's voice. None of it has been
+reviewed or approved by Paul yet. Nothing needs to be removed, only confirmed,
+edited, or replaced.
+
+**Editorial copy (Paul's voice, Matteo's phrasing):**
+- Landing page: compression framing (two paragraphs), adoption paragraph, closing/CTA
+- Pipeline taglines in `_data/videos.yml` (rendered on `pipeline/index.md`)
+- Pipeline page summaries (the 3-sentence paragraph on each `pipeline/*.md`)
+- Pipeline takeaways ("What you'll learn" bullets, sourced from Paul's own posts)
+- Track framing paragraphs, path why-lines, and closing lines in `_data/tracks.yml`
+  and the three track page templates
+- O-Ring why-line ("Why it's worth going deeper") may not match the post's actual
+  argument (which is a bottleneck warning, not encouragement)
+- New-to-AI practical guide (Paul's 2024 pre-Claude-Code talk page): flagged as
+  background material; Paul should decide whether to keep it alongside the pipeline
+
+**Landing page visuals (Paul's research artifacts):**
+- The econ-lit chart + data + paper download features Paul's own econ-lit pipeline
+  research on the front page. Paul should confirm he wants this prominently featured.
+- The compression diagram is a native SVG rebuild (not Paul's asset), attributed to
+  his "Research in the Time of AI" post. Paul should confirm the attribution.
+
+**Link architecture (three-tier rule):**
+
+| Destination | Tab behavior | ↗ marker |
+|---|---|---|
+| This site's own pages | Same tab | No |
+| Paul's own domains (`paulgp.com`, `paulgp.substack.com`) | New tab | **No** |
+| Third-party domains (everything else) | New tab | Yes |
+
+Paul's content should not read as "leaving to an external site." The marker
+logic is driven by a `paul_domains` list in `_config.yml`, kept **separate**
+from "this site's domain" so it stays correct after migration. At migration
+to `ai.paulgp.com`:
+- Update `baseurl` and `url` in `_config.yml` (the "this site" domain changes)
+- The `paul_domains` list stays unchanged (it already lists `paulgp.com`)
+- All `relative_url` links update automatically
+- No other link behavior changes needed
+
+**8-stage pipeline (proposal):**
+- PLAN.md lists 7 stages. We added 07-permissions (Permissions, Sandboxes, and
+  Autonomous Agents) based on Paul's Substack post and Markus Academy video,
+  renumbering workflow-git to 08. Paul should confirm.
+
+**Stub pages (not yet written):**
+- `talks/nber-hf-2026.md`: awaiting Paul's slides
+- `restricted-data.md`: Paul drafts this per the plan
 
 ## Version choices
 
@@ -160,8 +210,7 @@ paragraph → econ-lit chart + paper download → closing/CTA. Exactly one
 
 **Framing:** Two paragraphs on the compression thesis (AI shortens the
 distance between research stages without removing the researcher). Drawn
-from Paul's "Research in the Time of AI" post. Matteo's editorial phrasing
-in Paul's voice, pending Paul.
+from Paul's "Research in the Time of AI" post.
 
 **Compression diagram:** Native inline SVG in `_includes/compression_diagram.html`.
 Shows the research pipeline (Ideation → Design → Data → Analysis → Writing →
@@ -174,7 +223,7 @@ native rebuild crediting his figure.
 **Adoption paragraph:** Scoped deliberately to what the chart measures:
 mentions of LLMs in the economics literature, not claims about workflow
 adoption or productivity. Honest framing: "as the field works out where
-they fit." Matteo's editorial phrasing, pending Paul.
+they fit."
 
 **Chart:** Vanilla JS canvas in `_includes/econlit_chart.html`, reading
 committed CSVs via fetch (same `{% raw %}`/data-attributes pattern as the
@@ -190,26 +239,13 @@ econ-lit pipeline, July 2026 export.
 re-exporting from Paul's pipeline tool and replacing the CSVs. Monthly
 task (add to the review checklist).
 
-**Flags for Paul:**
-1. All landing copy (framing, adoption paragraph, closing/CTA) is Matteo's
-   editorial phrasing, pending Paul's review.
-2. The compression diagram is a native rebuild inspired by Paul's figure
-   in "Research in the Time of AI." Attributed, not copied. Paul should
-   confirm the attribution and whether he wants it on the front page.
-3. The econ-lit chart + data + download block features Paul's own research
-   artifact on the front page. Paul should confirm he wants this
-   prominently featured.
-4. The adoption paragraph is deliberately scoped to what the chart measures
-   (mentions in the literature, not workflow usage). This is an honest
-   framing choice, not an oversight.
-5. The "41,000+" figure in the download caption is attributed to Paul's
-   tool's scope.
+All landing copy flags are consolidated in "Awaiting Paul's review" above.
 
 ## Pipeline taglines
 
 The `tagline` field on each `videos.yml` entry is Matteo's editorial phrasing
-(written in Paul's voice, not sourced from the companion posts). These are
-rendered on `pipeline/index.md` via a data-driven loop. Pending Paul's review.
+(written in Paul's voice, not sourced from the companion posts). Rendered on
+`pipeline/index.md` via a data-driven loop.
 
 ## Start Here tracks
 
@@ -225,7 +261,7 @@ front matter. This matches PLAN.md's intent for separate track pages. The
 previous commit had temporarily put all track content inline on the index.
 
 Taglines, framing paragraphs, and path why-lines are all Matteo's editorial
-phrasing (in Paul's voice, not sourced from posts), pending Paul's review.
+phrasing (in Paul's voice, not sourced from posts).
 
 ### External links in tracks
 
@@ -240,15 +276,6 @@ The New-to-AI practical guide is Paul's 2024 pre-Claude-Code talk page (Copilot,
 ChatGPT, Claude for coding/data/teaching). Flagged as background material,
 pending Paul's view on whether to keep it alongside the Claude Code pipeline.
 
-### O-Ring label (flagged for Paul)
-
-The why-line for "AI and the Research O-Ring" is Matteo's editorial framing
-("Why it's worth going deeper."). The actual post argues something different:
-O-Ring dynamics mean AI can't bypass the weakest link in research, and human
-bottlenecks in downstream tasks are amplified rather than relieved. This is a
-structural warning, not encouragement. The label is kept as Matteo's editorial
-choice, pending Paul's review of whether it matches his intent for this track.
-
 ## UX/path navigation
 
 Four mechanisms added in separate commits:
@@ -258,9 +285,10 @@ Four mechanisms added in separate commits:
    only. Stage 08: prev only. All others: both. Shows destination title with
    arrow.
 
-2. **External link policy**: all off-site links have `target="_blank"
-   rel="noopener noreferrer"` and a ↗ glyph. Internal links navigate normally
-   with no marker. Applied to track Further reading items and all Elsewhere links.
+2. **External link policy (three-tier)**: see "Awaiting Paul's review" above
+   for the full table. Paul's domains get new-tab but no ↗; third-party gets
+   both. Driven by `site.paul_domains` in `_config.yml`. Data-driven templates
+   (track pages, elsewhere) use a Liquid loop to check the URL.
 
 3. **Track back-banner** (`?track=` param): client-side JavaScript reads
    `?track=<key>` from the URL. When present, the banner shows and the static
@@ -282,8 +310,7 @@ Four mechanisms added in separate commits:
    not in the `?track=` chain), and a closing line. External links in
    `tracks.yml` live under `further_reading`, not `path`. Each closing line
    mirrors the graduation ladder: New to AI → Casual User track, Casual →
-   Power User track, Power → full pipeline + Elsewhere. These are Matteo's
-   editorial phrasing, pending Paul's review. The old `closing_before`/
+   Power User track, Power → full pipeline + Elsewhere. The old `closing_before`/
    `closing_after` YAML fields have been removed; closings are now inline
    in each track page template.
 
@@ -397,30 +424,26 @@ The correct large-data ID is `4uwI1-9DafU` (Markus Academy Ep. 162-4), confirmed
 
 | Directory/File | Status |
 |----------------|--------|
-| `_config.yml` | Done |
-| `_layouts/default.html` | Done (adapted from Paul's) |
-| `_includes/video_page.html` | Done (template with takeaways, embed, resources) |
+| `index.md` | Done (landing: framing, diagram, chart, CTA) |
+| `start-here/index.md` | Done (router with track links) |
+| `start-here/*.md` (3 track files) | Done (data-driven from tracks.yml) |
+| `pipeline/index.md` | Done (8 stages, data-driven) |
+| `pipeline/*.md` (8 stage files) | Done (summaries + includes) |
+| `elsewhere.md` | Done (data-driven from elsewhere.yml) |
+| `restricted-data.md` | **Stub** (Paul drafts per plan) |
+| `talks/nber-hf-2026.md` | **Stub** (awaiting Paul's slides) |
 | `_data/videos.yml` | All 8 pipeline entries populated |
-| `_data/elsewhere.yml` | Stubbed with TODO placeholders |
-| `index.md` | All 8 pipeline links with real titles |
-| `start-here/index.md` | Stubbed (landing page with track picker) |
-| `start-here/*.md` (3 track files) | Stubbed |
-| `pipeline/index.md` | All 8 stages listed with real titles |
-| `pipeline/*.md` (8 stage files) | All populated with summaries + includes |
-| `restricted-data.md` | Stubbed |
-| `skills/index.md` | Stubbed |
-| `skills/pgp-writing-style/SKILL.md` | Portable voice skill fallback (excluded from build) |
-| `elsewhere.md` | Stubbed |
-| `changelog.md` | Batch entry added (excluded from site build, git-only) |
-| `content-notes/*.md` (8 files) | Repo-only working notes for all 8 topics |
-| `talks/nber-hf-2026.md` | Stubbed |
-| `assets/css/styles.css` | Done (adapted from Paul's) |
-| `assets/js/scale.fix.js` | Done (verbatim from Paul's) |
-| `.github/workflows/jekyll.yml` | Done (adapted from Paul's) |
-| `Gemfile` | Done |
-| `Gemfile.lock` | Done (generated with Ruby 3.3.5) |
-| `.ruby-version` | Done (ruby-3.3.5 for chruby auto-switch) |
-| `docs/PLAN.md` | Done (verbatim from Paul's PDF) |
+| `_data/tracks.yml` | All 3 tracks with paths + further reading |
+| `_data/elsewhere.yml` | 6 resources in 3 categories |
+| `_includes/video_page.html` | Done (takeaways, embed, resources, nav, banner) |
+| `_includes/pipeline_nav.html` | Done (prev/next) |
+| `_includes/compression_diagram.html` | Done (native SVG) |
+| `_includes/econlit_chart.html` | Done (vanilla JS canvas) |
+| `assets/data/*.csv` (3 files) | Done (July 2026 snapshot) |
+| `content-notes/*.md` (8 files) | Repo-only working notes |
+| `skills/pgp-writing-style/SKILL.md` | Portable voice skill (excluded from build) |
+| `_config.yml` | Done (includes paul_domains list) |
+| `assets/css/styles.css` | Done |
 | `CLAUDE.md` | Done |
 | `HANDOFF.md` | This file |
 
