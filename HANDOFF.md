@@ -1,7 +1,7 @@
 # HANDOFF — Decision Log & Current State
 
-**Date:** 2026-07-07
-**Phase:** 1 (skeleton)
+**Date:** 2026-07-09
+**Phase:** 2 (content — pilot: 04-large-data)
 **Canonical spec:** `docs/PLAN.md`
 **Repo conventions:** `CLAUDE.md`
 
@@ -130,6 +130,49 @@ bundle exec jekyll serve
 - `vendor/` is in `.gitignore` — gems are not committed.
 - Sass deprecation warnings from the minima theme are harmless.
 
+## videos.yml schema (live fields)
+
+Each entry in `_data/videos.yml` is keyed by the pipeline page slug and has these fields:
+
+```yaml
+04-large-data:
+  title: "Large Datasets and Structured Databases"   # video's real title
+  youtube_id: "4uwI1-9DafU"                          # ID only, not full URL
+  duration: "55:30"                                   # MM:SS
+  description: ""                                     # leave empty; summary lives in page .md
+  substack_url: "https://paulgp.substack.com/p/..."   # companion post
+  resources:                                          # renders as a bullet list
+    - title: "HMDA Data — CFPB"
+      url: "https://www.consumerfinance.gov/..."
+```
+
+The include (`_includes/video_page.html`) reads: `title`, `youtube_id`, `duration`,
+`description`, `substack_url`, and `resources` (list of `{url, title}`). There is no
+`timestamps` field — timestamps are captured in `content-notes/` only (see below).
+
+## content-notes/ layer
+
+`content-notes/` holds repo-only working material for Phase 2 content:
+- Sources (post, video, repos)
+- Draft summaries marked "DRAFT — pending Paul"
+- Timestamps (from Markus Academy listings, marked verified/unverified)
+- Application notes (not published)
+- Resource superset (including academic refs not in the live resources list)
+- Gaps and flags for Paul
+
+Excluded from the Jekyll build via `_config.yml`. Never published or linked from site pages.
+
+## Video-ID resolution (04-large-data)
+
+`list_of_links.rtf` listed the same YouTube ID (`wqLZrKdevHs`) for both:
+- 03-scraping (EDGAR) — **correct** (Markus Academy Ep. 162-3)
+- 04-large-data — **copy error**
+
+The correct large-data ID is `4uwI1-9DafU` (Markus Academy Ep. 162-4), confirmed via:
+1. YouTube search for "Markus Academy Paul Goldsmith-Pinkham Large Datasets"
+2. YouTube oembed API confirming the title match
+3. Markus Academy Substack listing (https://markusacademy.substack.com/p/large-datasets-claude-code-for-economists)
+
 ## Current state
 
 | Directory/File | Status |
@@ -137,17 +180,18 @@ bundle exec jekyll serve
 | `_config.yml` | Done |
 | `_layouts/default.html` | Done (adapted from Paul's) |
 | `_includes/video_page.html` | Done (template ready, needs real data in Phase 2) |
-| `_data/videos.yml` | Stubbed with TODO placeholders |
+| `_data/videos.yml` | 04-large-data populated; rest stubbed with TODO |
 | `_data/elsewhere.yml` | Stubbed with TODO placeholders |
 | `index.md` | Stubbed with nav links |
 | `start-here/index.md` | Stubbed (landing page with track picker) |
 | `start-here/*.md` (3 track files) | Stubbed |
 | `pipeline/index.md` | Stubbed (landing page listing all 7 stages) |
-| `pipeline/*.md` (7 stage files) | Stubbed with video_key front matter |
+| `pipeline/*.md` (7 stage files) | 04-large-data has draft summary; rest stubbed |
 | `restricted-data.md` | Stubbed |
 | `skills/index.md` | Stubbed |
 | `elsewhere.md` | Stubbed |
-| `changelog.md` | Stubbed (excluded from site build, git-only) |
+| `changelog.md` | Pilot entry added (excluded from site build, git-only) |
+| `content-notes/large-data.md` | Repo-only working notes for 04-large-data |
 | `talks/nber-hf-2026.md` | Stubbed |
 | `assets/css/styles.css` | Done (adapted from Paul's) |
 | `assets/js/scale.fix.js` | Done (verbatim from Paul's) |

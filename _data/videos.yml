@@ -27,12 +27,20 @@
   resources: []
 
 04-large-data:
-  title: "TODO: Large Data & APIs"
-  youtube_id: "TODO"
-  duration: "TODO"
-  description: "TODO"
-  substack_url: "TODO"
-  resources: []
+  title: "Large Datasets and Structured Databases"
+  youtube_id: "4uwI1-9DafU"
+  duration: "55:30"
+  description: ""
+  substack_url: "https://paulgp.substack.com/p/large-datasets-and-structured-databases"
+  resources:
+    - title: "HMDA Data — Consumer Financial Protection Bureau"
+      url: "https://www.consumerfinance.gov/data-research/hmda/"
+    - title: "DuckDB — In-process analytical database"
+      url: "https://duckdb.org/"
+    - title: "IPEDS Database (example project)"
+      url: "https://github.com/paulgp/ipeds-database"
+    - title: "Patent Data (example project)"
+      url: "https://github.com/paulgp/patent-data"
 
 05-writing:
   title: "TODO: Academic Writing with AI"

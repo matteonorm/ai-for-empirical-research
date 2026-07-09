@@ -56,6 +56,7 @@ They must NOT be re-published or re-linked from any site page.
 - `changelog.md` — internal change log, repo-only
 - `docs/PLAN.md` — Paul's canonical spec, repo-only
 - `HANDOFF.md`, `CLAUDE.md`, `README.md`
+- `content-notes/` — repo-only working material for Phase 2 content drafts (sources, timestamps, application notes, flags for Paul); never published or linked from site pages
 
 ## Key files
 
