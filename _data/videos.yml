@@ -147,7 +147,7 @@
     - "Sandboxing opens up the long-running-agent workflow: once the boundary is right, persistent agents become tractable"
     - "Treat an agent with tools like a research assistant: you would not give an RA a task where they can break everything, and the sandbox is how you enforce that"
   resources:
-    - title: "claude-container (Paul’s Docker setup)"
+    - title: "claude-container (my Docker setup)"
       url: "https://github.com/paulgp/claude-container"
     - title: "agent-safehouse"
       url: "https://agent-safehouse.dev/"

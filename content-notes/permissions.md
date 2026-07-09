@@ -48,7 +48,7 @@ Live bullets (6):
 ## Full Resource Superset (NOTES ONLY)
 
 ### Live resources (in videos.yml)
-- claude-container (Paul's Docker setup): https://github.com/paulgp/claude-container
+- claude-container (my Docker setup): https://github.com/paulgp/claude-container
 - agent-safehouse: https://agent-safehouse.dev/
 - OpenClaw: https://openclaw.ai/
 
