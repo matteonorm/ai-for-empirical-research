@@ -155,8 +155,9 @@ URL notes:
 ## Landing page (index.md)
 
 The landing page is a focused narrative arc: compression thesis framing,
-compression diagram, "it's already happening" transition, econ-lit trend
-chart with paper download, and a closing CTA to Start Here.
+compression diagram, applications-everywhere beat, "it's already happening"
+transition, econ-lit trend chart with paper download, and a closing CTA to
+Start Here.
 
 **Framing:** The compression thesis (AI shortens the distance between research
 stages without removing the researcher) is drawn from Paul's "Research in the
@@ -167,6 +168,10 @@ Shows the research pipeline (Ideation → Design → Data → Analysis → Writi
 Paper) in two rows: "Traditional" with wide gaps, "With AI" with compressed gaps.
 Built in site style (Spectral, DM Sans, rust #b5451b). No external dependencies
 or hotlinked images. Attributed to Paul's original figure with a link to the post.
+
+**Applications-everywhere beat:** Bridging paragraph ("And it helps everywhere
+along the way...") sourced from the stage-by-stage section of Paul's post.
+Matteo's editorial phrasing, pending Paul.
 
 **Chart:** Vanilla JS canvas in `_includes/econlit_chart.html`, reading
 committed CSVs via fetch (same `{% raw %}`/data-attributes pattern as the

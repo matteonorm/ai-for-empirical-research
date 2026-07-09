@@ -3,6 +3,13 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Landing: add applications-everywhere beat
+
+- Added a bridging paragraph between the compression diagram and the econ-lit
+  chart: "And it helps everywhere along the way..." Sourced from the stage-by-stage
+  section of Paul's "Research in the Time of AI" post. Matteo's editorial phrasing,
+  pending Paul.
+
 ## 2026-07-09 — Simplify compression diagram caption
 
 - Replaced the two-line caption (grey "After Paul Goldsmith-Pinkham," prefix +

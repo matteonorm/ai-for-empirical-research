@@ -13,6 +13,8 @@ This site is a practical guide to that shift: the tools that already work, shown
 
 {% include compression_diagram.html %}
 
+And it helps everywhere along the way. At every stage, from sharpening an idea to assembling data, running the analysis, drafting the paper, and answering referees, there is now a way these tools can move the work forward. None of that removes the hard part, which is still knowing where to walk. But the flashlight helps.
+
 It is already happening. Mentions of large language models in the economics literature have climbed sharply since 2022.
 
 {% include econlit_chart.html %}
