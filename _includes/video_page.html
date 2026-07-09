@@ -62,12 +62,13 @@
 
   var track = defined_tracks[trackKey];
   var baseUrl = '{{ "" | relative_url }}';
-  var currentPath = window.location.pathname.replace(/\/$/, '');
+  function normPath(p) { return p.replace(/\.html$/, '').replace(/\/$/, ''); }
+  var currentPath = normPath(window.location.pathname);
 
   var internalItems = track.path.filter(function(s) { return !s.external; });
   var idx = -1;
   for (var i = 0; i < internalItems.length; i++) {
-    var itemPath = (baseUrl + internalItems[i].url).replace(/\/$/, '');
+    var itemPath = normPath(baseUrl + internalItems[i].url);
     if (itemPath === currentPath) { idx = i; break; }
   }
   if (idx < 0) return;
