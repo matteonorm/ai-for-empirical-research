@@ -3,6 +3,14 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Elsewhere: update Sant'Anna URL/description and Blattman title
+
+- Sant'Anna: changed URL from GitHub repo to `psantanna.com/claude-code-my-workflow/`;
+  rewrote description to reflect the full academic workflow system (not just a
+  slides template).
+- Blattman: changed display title from "claudeblattman.com" to
+  "Claude Blattman · AI for Professionals Who Don't Code." Description unchanged.
+
 ## 2026-07-09 — UX/path navigation (4 commits)
 
 Four navigation mechanisms, each in its own commit:

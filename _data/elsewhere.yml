@@ -20,14 +20,14 @@ guides:
 workflows:
   label: "Workflow systems"
   items:
-    - title: "claudeblattman.com"
+    - title: "Claude Blattman · AI for Professionals Who Don’t Code"
       url: "https://claudeblattman.com"
       author: "Chris Blattman"
       description: "Open-source Claude Code setup for non-programmers: project management, inbox and meeting workflows, and downloadable skills."
     - title: "Claude Code My Workflow"
-      url: "https://github.com/pedrohcgs/claude-code-my-workflow"
+      url: "https://psantanna.com/claude-code-my-workflow/"
       author: "Pedro Sant’Anna"
-      description: "Ready-to-fork Claude Code template for LaTeX, Beamer, and R projects, with specialized agents, multi-agent review, and replication protocols."
+      description: "A fork-able Claude Code system for academic work across papers, slides, data analysis, and replication packages, with specialized review agents and quality gates."
 
 video:
   label: "Video series"
