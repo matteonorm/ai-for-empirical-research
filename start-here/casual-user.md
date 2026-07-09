@@ -1,9 +1,22 @@
 ---
 layout: default
 title: "Casual User"
+track_key: "casual-user"
 ---
 
-<div class="todo-placeholder">
-TODO: Content for researchers who have used ChatGPT or similar tools
-casually but want to integrate AI more deeply into their workflow.
-</div>
+{% assign track = site.data.tracks[page.track_key] %}
+
+<p>{{ track.framing }}</p>
+
+<ol class="track-path">
+{% for step in track.path %}
+<li>
+  {% if step.external %}
+  <a href="{{ step.url }}">{{ step.title }}</a>
+  {% else %}
+  <a href="{{ step.url | relative_url }}">{{ step.title }}</a>
+  {% endif %}
+  <span class="track-why">{{ step.why }}</span>
+</li>
+{% endfor %}
+</ol>

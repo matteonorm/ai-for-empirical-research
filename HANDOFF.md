@@ -138,8 +138,13 @@ rendered on `pipeline/index.md` via a data-driven loop. Pending Paul's review.
 The three tracks (New to AI, Casual User, Power User) are data-driven via
 `_data/tracks.yml`. Each entry has `title`, `url`, `tagline`, `framing` (a short
 paragraph), and `path` (an ordered list of `{title, url, why}` items).
-`start-here/index.md` loops over the data file using an explicit slug list
-(matching the pipeline pattern).
+
+**Structure:** `start-here/index.md` is a short router (heading, TODO framing
+paragraph, three track links with taglines). Each track's full content (framing,
+ordered path, closing) lives on its own page (`start-here/new-to-ai.md`,
+`casual-user.md`, `power-user.md`), rendered from `tracks.yml` via `track_key`
+front matter. This matches PLAN.md's intent for separate track pages. The
+previous commit had temporarily put all track content inline on the index.
 
 Taglines, framing paragraphs, and path why-lines are all Matteo's editorial
 phrasing (in Paul's voice, not sourced from posts), pending Paul's review.

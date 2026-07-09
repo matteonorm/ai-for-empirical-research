@@ -3,6 +3,15 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Restructure Start Here: router index + per-track pages
+
+- `start-here/index.md` is now a short router: heading, TODO framing paragraph,
+  three track links with taglines only.
+- Each track page (`new-to-ai.md`, `casual-user.md`, `power-user.md`) renders
+  its own framing, ordered path, and closing from `_data/tracks.yml` via
+  `track_key` front matter. TODO placeholders removed.
+- No new content; all data was already in `tracks.yml` from the previous commit.
+
 ## 2026-07-09 — Populate Start Here tracks (data-driven)
 
 - Extended `_data/tracks.yml` with `framing`, `path` (ordered list of
