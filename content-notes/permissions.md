@@ -15,7 +15,7 @@ containers and devcontainers that mount only the folders you need, drop network
 access once setup is done, and let you run Claude in auto or YOLO mode inside a
 tight boundary. It also covers data governance (privacy filters for sensitive
 material, local models as a fallback) and long-running agent workflows like
-OpenClaw and the "Duncan Idaho" personal research agent.
+OpenClaw and how to set up your own personal research agent.
 
 ## What you'll learn (from post's takeaways section)
 
