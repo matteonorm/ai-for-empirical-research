@@ -5,32 +5,16 @@ title: "AI for Empirical Research"
 
 ### A curated guide to AI tools for empirical researchers
 
-<div class="todo-placeholder">
-TODO: Landing page content. This will include a brief introduction,
-links to the "Start Here" tracks, and an overview of the pipeline sections.
-</div>
+Research runs through stages, from the first idea to the published paper. The worry is that AI replaces the researcher. The more useful question is where, in each of those stages, AI actually moves the frontier. This site is a practical guide to that: the tools that already work, shown through real economic research, stage by stage.
 
-### Start Here
+It is already happening. Mentions of large language models in the economics literature have climbed sharply since 2022.
 
-Pick your track:
+{% include econlit_chart.html %}
 
-- [New to AI]({{ '/start-here/new-to-ai' | relative_url }})
-- [Casual User]({{ '/start-here/casual-user' | relative_url }})
-- [Power User]({{ '/start-here/power-user' | relative_url }})
+<p class="chart-caption">Share of economics papers mentioning LLMs, 2011 to 2025. As of July 2026, from Paul Goldsmith-Pinkham's <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">econ-lit search pipeline ↗</a>.</p>
 
-### The Pipeline
+<p class="chart-download"><a href="{{ '/assets/data/econlit-papers.csv' | relative_url }}" download>Download the matching papers (CSV)</a></p>
 
-- [Getting Started with Claude Code]({{ '/pipeline/01-setup' | relative_url }})
-- [From an Empty Folder to a Figure]({{ '/pipeline/02-data-analysis' | relative_url }})
-- [From EDGAR Filings to a Structured Database]({{ '/pipeline/03-scraping' | relative_url }})
-- [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})
-- [Writing and Thinking with AI]({{ '/pipeline/05-writing' | relative_url }})
-- [Skills: How an Agent Should Think]({{ '/pipeline/06-skills' | relative_url }})
-- [Permissions & Sandboxes]({{ '/pipeline/07-permissions' | relative_url }})
-- [Integration and Collaboration]({{ '/pipeline/08-workflow-git' | relative_url }})
+<p class="chart-caption">The search covers 41,000+ papers with full text; this file is the subset that mention LLMs. Explore the <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">live tool here ↗</a>.</p>
 
-### More
-
-- [Restricted Data]({{ '/restricted-data' | relative_url }})
-- [Elsewhere]({{ '/elsewhere' | relative_url }})
-- [Talks]({{ '/talks/nber-hf-2026' | relative_url }})
+The tools are already here. When you're ready, <a href="{{ '/start-here/' | relative_url }}">pick your track and start</a>.

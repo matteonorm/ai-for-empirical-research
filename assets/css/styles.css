@@ -238,6 +238,37 @@ section { padding-right: 2rem; }
   margin: 1rem 0;
 }
 
+.chart-container {
+  margin: 1.5rem 0;
+}
+
+.chart-container canvas {
+  width: 100%;
+  height: auto;
+}
+
+.chart-caption {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.chart-download {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.journal-select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #faf8f5;
+  display: block;
+}
+
 @media print {
   body { color: #000; background: #fff; }
   a { color: #000; text-decoration: underline; }

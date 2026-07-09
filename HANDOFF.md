@@ -152,6 +152,34 @@ URL notes:
 - Scott Cunningham: `causalinf.substack.com` (not `scottcunningham.substack.com`)
 - Markus' Academy: `bcf.princeton.edu/markus-academy/` (`markusacademy.org` does not resolve)
 
+## Landing page (index.md)
+
+The landing page is a focused narrative: vision framing, econ-lit trend chart,
+paper download, and a closing CTA to Start Here. The old link lists (Start
+Here, Pipeline, More) were removed; those are accessible from the sidebar nav.
+
+**Chart:** Vanilla JS canvas in `_includes/econlit_chart.html`, reading
+committed CSVs via fetch (same `{% raw %}`/data-attributes pattern as the
+track banner). Default: aggregate curve from `econlit-trend.csv`. Journal
+selector dropdown reads `econlit-trend-by-journal.csv`. No external deps.
+
+**Data:** Three CSVs under `assets/data/`: aggregate trend, per-journal
+trend, and matching papers (for download). Dated snapshot from Paul's
+econ-lit pipeline, July 2026 export.
+
+**Snapshot rule:** These are static files, not live-fetched. Refresh by
+re-exporting from Paul's pipeline tool and replacing the CSVs. Monthly
+task (add to the review checklist).
+
+**Flags for Paul:**
+1. Vision framing, chart caption, download caption, and closing CTA are
+   Matteo's editorial phrasing, pending Paul's review.
+2. The chart + data + download block features Paul's own econ-lit pipeline
+   research artifact on the front page. Paul should confirm he wants this
+   prominently featured.
+3. The "41,000+" figure in the download caption is attributed to Paul's
+   tool's scope.
+
 ## Pipeline taglines
 
 The `tagline` field on each `videos.yml` entry is Matteo's editorial phrasing
