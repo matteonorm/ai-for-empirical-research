@@ -21,7 +21,7 @@ ai-for-empirical-research/
 │   ├── videos.yml         # one entry per video: URL, timestamps, links
 │   └── elsewhere.yml      # curated external resources
 ├── start-here/            # new-to-ai.md, casual-user.md, power-user.md
-├── pipeline/              # 01-setup … 07-workflow-git (seven stages)
+├── pipeline/              # 01-setup … 08-workflow-git (eight stages)
 ├── restricted-data.md     # working with data an agent can't touch (RDCs, PII)
 ├── skills/                # downloadable skill files + starter CLAUDE.md
 ├── elsewhere.md           # renders from _data/elsewhere.yml

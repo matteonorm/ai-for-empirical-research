@@ -26,7 +26,8 @@ Pick your track:
 - [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})
 - [Academic Writing]({{ '/pipeline/05-writing' | relative_url }})
 - [Building Skills]({{ '/pipeline/06-skills' | relative_url }})
-- [Workflow & Git]({{ '/pipeline/07-workflow-git' | relative_url }})
+- [Permissions & Sandboxes]({{ '/pipeline/07-permissions' | relative_url }})
+- [Workflow & Git]({{ '/pipeline/08-workflow-git' | relative_url }})
 
 ### More
 

@@ -63,7 +63,15 @@
   substack_url: "TODO"
   resources: []
 
-07-workflow-git:
+07-permissions:
+  title: "TODO: Permissions, Sandboxes, and Autonomous Agents"
+  youtube_id: "TODO"
+  duration: "TODO"
+  description: "TODO"
+  substack_url: "TODO"
+  resources: []
+
+08-workflow-git:
   title: "TODO: Workflow & Git"
   youtube_id: "TODO"
   duration: "TODO"
