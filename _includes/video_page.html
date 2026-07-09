@@ -1,4 +1,8 @@
-{% assign video = site.data.videos[page.video_key] %}
+{% if include.video_key %}
+  {% assign video = site.data.videos[include.video_key] %}
+{% else %}
+  {% assign video = site.data.videos[page.video_key] %}
+{% endif %}
 
 {% if video %}
 <div class="video-page">
@@ -48,6 +52,7 @@
   {% include pipeline_nav.html %}
 </div>
 
+{% if page.video_key %}
 <script>
 (function() {
   var defined_tracks = {{ site.data.tracks | jsonify }};
@@ -90,6 +95,7 @@
   }
 })();
 </script>
+{% endif %}
 
 {% else %}
 <div class="todo-placeholder">TODO: No video data found for key "{{ page.video_key }}". Check _data/videos.yml.</div>
