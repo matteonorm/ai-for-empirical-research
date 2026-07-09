@@ -238,6 +238,30 @@ section { padding-right: 2rem; }
   margin: 1rem 0;
 }
 
+.compression-diagram {
+  margin: 1.5rem 0;
+}
+
+.compression-diagram svg {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+}
+
+.diagram-caption {
+  font-style: italic;
+  font-size: 0.88rem;
+  color: #555;
+  margin-top: 0.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.diagram-attribution {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 0;
+}
+
 .chart-container {
   margin: 1.5rem 0;
 }

@@ -3,19 +3,31 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Landing page: compression framing, native diagram, econ-lit evidence
+
+- Rewrote landing page framing around the "timeline compression" thesis (drawn
+  from Paul's "Research in the Time of AI" post): AI compresses the distance
+  between research stages without removing the researcher.
+- Added a native inline SVG compression diagram showing the research pipeline
+  (Ideation → Design → Data → Analysis → Writing → Paper) in two rows:
+  "Traditional" with wide gaps, "With AI" compressed. Built in site style
+  (Spectral, DM Sans, rust #b5451b), no external dependencies. Attributed to
+  Paul's original figure.
+- Relabeled chart selector from "All economics papers" to "Top economics
+  journals" to match the data scope.
+- Removed the redundant "Explore the live tool here" line (the chart caption
+  already links to Paul's pipeline).
+- All framing, captions, diagram caption, and closing are Matteo's editorial
+  (pending Paul). The compression diagram is a native rebuild inspired by
+  Paul's figure (attributed). The econ-lit chart + data are Paul's research
+  artifact featured on the front page (flagged for Paul's review).
+
 ## 2026-07-09 — Build landing page: econ-lit chart, paper download, start-here CTA
 
-- Replaced the TODO placeholder landing page with a focused narrative arc:
-  vision framing, econ-lit trend chart (Paul's pipeline data), paper download
-  link, and a closing CTA to Start Here.
-- Chart: vanilla JS canvas reading committed CSVs via fetch. Aggregate curve
-  (2011 to 2025) as default, journal selector dropdown for per-journal view.
-  No external dependencies. Styled to match the site.
-- Data: three CSVs under `assets/data/` (aggregate trend, per-journal trend,
-  matching papers). Dated snapshot from July 2026, refreshed monthly.
-- All framing, captions, and closing are Matteo's editorial, pending Paul.
-  The entire chart + data block is Paul's own research artifact, flagged for
-  his review.
+- Added econ-lit trend chart (vanilla JS canvas) and three data CSVs under
+  `assets/data/`. Aggregate curve (2011 to 2025) as default, journal selector
+  dropdown for per-journal view. No external dependencies.
+- Data: dated snapshot from July 2026, refreshed monthly.
 
 ## 2026-07-09 — Add Practical Guide as New-to-AI further reading
 

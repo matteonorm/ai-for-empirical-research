@@ -154,14 +154,25 @@ URL notes:
 
 ## Landing page (index.md)
 
-The landing page is a focused narrative: vision framing, econ-lit trend chart,
-paper download, and a closing CTA to Start Here. The old link lists (Start
-Here, Pipeline, More) were removed; those are accessible from the sidebar nav.
+The landing page is a focused narrative arc: compression thesis framing,
+compression diagram, "it's already happening" transition, econ-lit trend
+chart with paper download, and a closing CTA to Start Here.
+
+**Framing:** The compression thesis (AI shortens the distance between research
+stages without removing the researcher) is drawn from Paul's "Research in the
+Time of AI" post. Matteo's editorial phrasing in Paul's voice, pending Paul.
+
+**Compression diagram:** Native inline SVG in `_includes/compression_diagram.html`.
+Shows the research pipeline (Ideation → Design → Data → Analysis → Writing →
+Paper) in two rows: "Traditional" with wide gaps, "With AI" with compressed gaps.
+Built in site style (Spectral, DM Sans, rust #b5451b). No external dependencies
+or hotlinked images. Attributed to Paul's original figure with a link to the post.
 
 **Chart:** Vanilla JS canvas in `_includes/econlit_chart.html`, reading
 committed CSVs via fetch (same `{% raw %}`/data-attributes pattern as the
-track banner). Default: aggregate curve from `econlit-trend.csv`. Journal
-selector dropdown reads `econlit-trend-by-journal.csv`. No external deps.
+track banner). Default: aggregate curve from `econlit-trend.csv`, labeled
+"Top economics journals (aggregate)". Journal selector dropdown reads
+`econlit-trend-by-journal.csv`. No external deps.
 
 **Data:** Three CSVs under `assets/data/`: aggregate trend, per-journal
 trend, and matching papers (for download). Dated snapshot from Paul's
@@ -172,12 +183,15 @@ re-exporting from Paul's pipeline tool and replacing the CSVs. Monthly
 task (add to the review checklist).
 
 **Flags for Paul:**
-1. Vision framing, chart caption, download caption, and closing CTA are
-   Matteo's editorial phrasing, pending Paul's review.
-2. The chart + data + download block features Paul's own econ-lit pipeline
+1. All framing, captions, diagram caption, and closing CTA are Matteo's
+   editorial phrasing, pending Paul's review.
+2. The compression diagram is a native rebuild inspired by Paul's figure
+   in "Research in the Time of AI." Attributed, not copied. Paul should
+   confirm the attribution and whether he wants it on the front page.
+3. The chart + data + download block features Paul's own econ-lit pipeline
    research artifact on the front page. Paul should confirm he wants this
    prominently featured.
-3. The "41,000+" figure in the download caption is attributed to Paul's
+4. The "41,000+" figure in the download caption is attributed to Paul's
    tool's scope.
 
 ## Pipeline taglines
