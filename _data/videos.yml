@@ -43,12 +43,25 @@
       url: "https://www.census.gov/housing/hvs/"
 
 03-scraping:
-  title: "TODO: Web Scraping"
-  youtube_id: "TODO"
-  duration: "TODO"
-  description: "TODO"
-  substack_url: "TODO"
-  resources: []
+  title: "From EDGAR Filings to a Structured Database"
+  youtube_id: "wqLZrKdevHs"
+  duration: "27:46"
+  description: ""
+  substack_url: "https://paulgp.substack.com/p/from-edgar-filings-to-a-structured"
+  takeaways:
+    - "Front-load context for scraping tasks: tell Claude about rate limits, API structure, and expected response formats before it starts writing code"
+    - "Let Claude ask you questions about design decisions rather than specifying everything upfront; the interactive back-and-forth produces better architecture"
+    - "Build or approve the database schema yourself, and use DuckDB or SQLite for research-scale projects where a full database server is overkill"
+    - "Build resume capability into network-dependent pipelines so a dropped connection doesn't mean starting over"
+    - "Add quality reports that run after each stage; they catch parsing failures early (in this case, surfacing that 1 of 120 filings failed)"
+    - "Run a real descriptive analysis on the output: if the finding makes sense (tariff mentions rising in the expected years), it validates the whole pipeline"
+  resources:
+    - title: "SEC EDGAR Full-Text Search"
+      url: "https://efts.sec.gov/LATEST/"
+    - title: "DuckDB: In-process analytical database"
+      url: "https://duckdb.org/"
+    - title: "Economic Policy Uncertainty Index"
+      url: "https://www.policyuncertainty.com/"
 
 04-large-data:
   title: "Large Datasets and Structured Databases"
