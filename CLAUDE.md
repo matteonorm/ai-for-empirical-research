@@ -49,6 +49,13 @@ the global skill isn't found.
 - Register: match Paul's Substack/blog voice (the source posts), which is more
   casual than his papers. Paraphrase closely from his own phrasing in the post.
 
+**Curly quotes:** Use curly/typographic quotes uniformly in all rendered content.
+kramdown curls straight quotes in Markdown prose automatically, but strings in
+`_data/videos.yml` (titles, takeaways, resource labels) are printed verbatim by
+the include, so type curly quotes directly in those files. No straight quotes
+should appear in rendered page text. Do not alter quotes in code blocks,
+filenames, URLs, or YAML syntax itself.
+
 **No em-dashes:** Never use the em-dash in site content or content-notes prose.
 Em-dashes are a common AI-writing tell; we strip them from AI-drafted copy.
 Rewrite with commas, colons, parentheses, or separate sentences. Applies to

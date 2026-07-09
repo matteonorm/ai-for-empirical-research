@@ -32,7 +32,7 @@
   substack_url: "https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure"
   takeaways:
     - "Let Claude handle data acquisition: point it at the source (Census, FRED) and let it navigate the download, rather than spending 20 minutes finding the right table yourself"
-    - "Reference style guides you like (such as Kieran Healy's data visualization work) instead of specifying individual plot parameters one at a time"
+    - "Reference style guides you like (such as Kieran Healy’s data visualization work) instead of specifying individual plot parameters one at a time"
     - "Iterate in small steps rather than writing one comprehensive specification; refine the figure incrementally"
     - "Always generate scripts, not just outputs: the code is the reproducible artifact, not the chart"
     - "The judgment is still yours: Claude accelerates implementation, but choosing what to plot and how to interpret it remains your job"
@@ -52,7 +52,7 @@
     - "Front-load context for scraping tasks: tell Claude about rate limits, API structure, and expected response formats before it starts writing code"
     - "Let Claude ask you questions about design decisions rather than specifying everything upfront; the interactive back-and-forth produces better architecture"
     - "Build or approve the database schema yourself, and use DuckDB or SQLite for research-scale projects where a full database server is overkill"
-    - "Build resume capability into network-dependent pipelines so a dropped connection doesn't mean starting over"
+    - "Build resume capability into network-dependent pipelines so a dropped connection doesn’t mean starting over"
     - "Add quality reports that run after each stage; they catch parsing failures early (in this case, surfacing that 1 of 120 filings failed)"
     - "Run a real descriptive analysis on the output: if the finding makes sense (tariff mentions rising in the expected years), it validates the whole pipeline"
   resources:
@@ -70,10 +70,10 @@
   description: ""
   substack_url: "https://paulgp.substack.com/p/large-datasets-and-structured-databases"
   takeaways:
-    - "Use DuckDB and Parquet instead of CSVs and dataframes when data doesn't fit in RAM, with lazy-loading and fast aggregation"
-    - "Build metadata tables as 'context engineering for data': store schema, descriptions, and value labels inside the database so it documents itself across sessions"
+    - "Use DuckDB and Parquet instead of CSVs and dataframes when data doesn’t fit in RAM, with lazy-loading and fast aggregation"
+    - "Build metadata tables as ‘context engineering for data’: store schema, descriptions, and value labels inside the database so it documents itself across sessions"
     - "Use plan mode before writing code, so Claude designs the pipeline architecture and creates a persistent reference rather than jumping into premature edits"
-    - "Ask what's feasible first. Inquire about obstacles and missing information before directing Claude to complete a task"
+    - "Ask what’s feasible first. Inquire about obstacles and missing information before directing Claude to complete a task"
     - "Deploy parallel sub-agents for research tasks, but verify they inherit your constraints, since they write their own sub-prompts"
     - "The fixed cost of proper data engineering has collapsed: large administrative datasets (HMDA, Medicare claims, patent filings) are more accessible than the tooling barriers suggest"
   resources:
@@ -102,7 +102,7 @@
       url: "https://github.com/jusi-aalto/strategic-revision"
     - title: "Refine.ink (Ben Golub)"
       url: "https://refine.ink/"
-    - title: "Paul's style guide"
+    - title: "Paul’s style guide"
       url: "https://paulgp.com/style_guide.md"
 
 06-skills:
@@ -116,8 +116,8 @@
     - "Start narrow and opinionated: one repeated problem, one well-specified output structure"
     - "The description field is a trigger, not a title; Claude uses it to decide when the skill applies, so write it for the model, not for humans"
     - "Test on the work you actually do: the theory-vs.-empirical fix in the paper-summary skill only surfaced because it was run on a real paper"
-    - "Check what already ships with Claude Code and what's in the marketplace before building from scratch"
-    - "Be careful what you install: skills fill the context window, and third-party skills are someone else's instructions running in your environment"
+    - "Check what already ships with Claude Code and what’s in the marketplace before building from scratch"
+    - "Be careful what you install: skills fill the context window, and third-party skills are someone else’s instructions running in your environment"
   resources:
     - title: "Claude Code skills documentation"
       url: "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
@@ -134,13 +134,13 @@
   substack_url: "https://paulgp.substack.com/p/permissions-sandboxes-and-autonomous"
   takeaways:
     - "Permissions come in two forms (folder access and tool access), and both need to be reasoned about separately"
-    - "Auto and YOLO approval modes can be sensible if you prepare the environment first; reflexive 'yes' clicks are not real safety"
+    - "Auto and YOLO approval modes can be sensible if you prepare the environment first; reflexive ‘yes’ clicks are not real safety"
     - "The real lever is the environment: mount only what you need, drop capabilities, use --network=none once setup is done"
     - "Data governance is separate from sandboxing; for genuinely sensitive material, a local model may be the right answer rather than a remote one"
     - "Sandboxing opens up the long-running-agent workflow: once the boundary is right, persistent agents become tractable"
     - "Treat an agent with tools like a research assistant: you would not give an RA a task where they can break everything, and the sandbox is how you enforce that"
   resources:
-    - title: "claude-container (Paul's Docker setup)"
+    - title: "claude-container (Paul’s Docker setup)"
       url: "https://github.com/paulgp/claude-container"
     - title: "agent-safehouse"
       url: "https://agent-safehouse.dev/"
@@ -162,5 +162,5 @@
   resources:
     - title: "ipo-bump project repo"
       url: "https://github.com/paulgp/ipo-bump"
-    - title: "Jay Ritter's IPO data"
+    - title: "Jay Ritter’s IPO data"
       url: "https://site.warrington.ufl.edu/ritter/ipo-data/"
