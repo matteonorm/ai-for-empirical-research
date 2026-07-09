@@ -65,6 +65,15 @@ That's it — all links use `relative_url`, so no other changes needed.
 - `_plugins/pdf_scanner.rb` — PDF gallery generator
 - `assets/css/blog.css`, `assets/css/github-light.css`, `assets/css/jekyll-code-style.css` — blog/code styling
 
+## Writing style rule
+
+Never use the em-dash in site content or content-notes prose. It is a common
+AI-writing tell, and Paul applies the same standard in his editing. Rewrite
+with commas, colons, parentheses, or separate sentences. Applies to prose
+only, not to hyphens in compound words, filenames, or numeric ranges.
+
+The enforceable rule is in `CLAUDE.md` under "Writing style."
+
 ## Deviations from docs/PLAN.md
 
 1. **No `github-pages` gem** — plan mentions it in Phase 1 step 3; Paul's actual repo doesn't use it. Noted above.

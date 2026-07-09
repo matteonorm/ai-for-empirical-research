@@ -35,13 +35,13 @@
   takeaways:
     - "How to turn a large, messy administrative dataset into a clean, documented, queryable database using Claude Code"
     - "Converting CSVs to Parquet for 15x compression and using DuckDB to query data too large for memory"
-    - "Building metadata tables as 'context engineering for data' — self-documenting datasets that preserve context across sessions"
+    - "Building metadata tables as 'context engineering for data': self-documenting datasets that preserve context across sessions"
     - "Using Claude Code's planning mode to design the architecture before writing any code"
     - "A generalizable pattern (download → convert → harmonize → document → query → analyze) that applies to HMDA, Medicare claims, patent filings, and other large administrative datasets"
   resources:
-    - title: "HMDA Data — Consumer Financial Protection Bureau"
+    - title: "HMDA Data (Consumer Financial Protection Bureau)"
       url: "https://www.consumerfinance.gov/data-research/hmda/"
-    - title: "DuckDB — In-process analytical database"
+    - title: "DuckDB: In-process analytical database"
       url: "https://duckdb.org/"
     - title: "IPEDS Database (example project)"
       url: "https://github.com/paulgp/ipeds-database"
