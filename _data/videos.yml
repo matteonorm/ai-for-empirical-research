@@ -85,12 +85,25 @@
       url: "https://github.com/paulgp/ipeds-database"
 
 05-writing:
-  title: "TODO: Academic Writing with AI"
-  youtube_id: "TODO"
-  duration: "TODO"
-  description: "TODO"
-  substack_url: "TODO"
-  resources: []
+  title: "Writing and Thinking with AI Assistance"
+  youtube_id: "BxfSiB3Moyo"
+  duration: "46:39"
+  description: ""
+  substack_url: "https://paulgp.substack.com/p/writing-and-thinking-with-ai-assistance"
+  takeaways:
+    - "Writing is thinking: be deliberate about what you offload versus what you do yourself, and check whether you can discuss the ideas in depth without the LLM"
+    - "Build a style guide (a markdown skill file) so the LLM approximates your voice, but expect it to be a useful caricature, not a perfect match"
+    - "Start with banal writing: boilerplate, first-pass summaries, and routine documentation are where AI assistance pays off most"
+    - "Use the strategic-revision skill to turn referee reports into a dependency-aware revision plan with prioritized execution blocks"
+    - "Ask for comments, not rewrites: this keeps you engaged and prevents your prose from drifting toward generic LLM voice"
+    - "Think first, then write with AI: iterate your ideas as far as you can before involving the LLM, because specificity is enormously valuable"
+  resources:
+    - title: "Strategic-revision skill"
+      url: "https://github.com/jusi-aalto/strategic-revision"
+    - title: "Refine.ink (Ben Golub)"
+      url: "https://refine.ink/"
+    - title: "Paul's style guide"
+      url: "https://paulgp.com/style_guide.md"
 
 06-skills:
   title: "TODO: Building AI Skills"
