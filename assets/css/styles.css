@@ -69,6 +69,19 @@ section > h3:not(:first-of-type) {
   margin-bottom: 0.5rem;
 }
 
+.video-page h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
 p, ul, ol { margin-bottom: 0.75rem; }
 li { margin: 0.5rem 0; line-height: 1.6; }
 li li { margin: 0.25rem 0; }
