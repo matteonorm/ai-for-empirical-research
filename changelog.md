@@ -3,6 +3,14 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Elsewhere: notable sessions + neutral pgp-voice descriptions
+
+- Added four Markus' Academy sessions as a `sessions` sub-list (Bryan, Golub,
+  Correia, Talamas), each fetched and described from its event page.
+- Removed "Paul's video series lives here" from the Markus' Academy entry.
+- Rewrote all descriptions in pgp voice: direct, concrete, no filler or
+  marketing adjectives. All external links open in new tabs.
+
 ## 2026-07-09 — Fill Elsewhere: external ecosystem resources
 
 - Populated `_data/elsewhere.yml` with 6 verified resources in 3 categories

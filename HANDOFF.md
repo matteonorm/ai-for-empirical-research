@@ -134,9 +134,18 @@ people's AI-for-research resources, not Paul's own content (that's the
 pipeline). Data-driven from `_data/elsewhere.yml`, grouped into three
 categories (Guides and writing, Workflow systems, Video series).
 
-All six resources verified via fetch on 2026-07-09. All URLs return 200.
-No resources were left out. Descriptions are one-liners written from what
-the fetched pages actually say, not from memory.
+All six umbrella resources plus four Markus' Academy sessions verified via
+fetch on 2026-07-09. All URLs return 200. Descriptions are one-liners in
+pgp voice (direct, concrete, no filler), written from what the fetched pages
+actually say.
+
+The Markus' Academy entry previously said "Paul's video series lives here."
+This was removed: Elsewhere points outward to others' work and should not
+re-center on Paul. The entry now describes the series itself.
+
+Four notable sessions added as a `sessions` sub-list under the Markus'
+Academy entry: Kevin Bryan, Benjamin Golub, Sergio Correia, Eduard Talamas.
+Each verified via its Princeton Bendheim event page.
 
 URL notes:
 - Anton Korinek: `genaiforecon.org` (not the Google Sites URL, which has a login wall)

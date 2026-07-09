@@ -1,5 +1,5 @@
 # External ecosystem: other people’s AI-for-research resources.
-# NOT Paul’s own content (that's the pipeline).
+# NOT Paul's own content (that's the pipeline).
 
 guides:
   label: "Guides and writing"
@@ -7,15 +7,15 @@ guides:
     - title: "Generative AI for Economic Research"
       url: "https://www.genaiforecon.org/"
       author: "Anton Korinek"
-      description: "A living companion site to Korinek’s JEL paper, covering use cases in ideation, writing, data analysis, coding, and mathematical derivations, with semi-annual updates."
+      description: "Companion site to Korinek’s JEL survey on LLMs in economics. Covers ideation, writing, coding, data analysis, and math; updated roughly every six months."
     - title: "Causal Inference Substack"
       url: "https://causalinf.substack.com"
       author: "Scott Cunningham"
-      description: "A Substack on causal inference and econometrics with a focus on how AI agents are transforming the way researchers work, through practical tutorials and applied research."
+      description: "Newsletter on causal inference and econometrics, increasingly focused on how AI agents change the research workflow. Mixes tutorials with applied examples."
     - title: "AI Econ Wiki"
       url: "https://velikov-mihail.github.io/ai-econ-wiki/"
       author: "Mihail Velikov"
-      description: "A curated knowledge base on AI tools and workflows for business and economic research, built from 176+ web articles and academic papers."
+      description: "Curated knowledge base on AI tools for business and economics research, compiled from 176+ articles and papers."
 
 workflows:
   label: "Workflow systems"
@@ -23,11 +23,11 @@ workflows:
     - title: "claudeblattman.com"
       url: "https://claudeblattman.com"
       author: "Chris Blattman"
-      description: "An open-source system for using Claude Code without coding: research project management, inbox and meeting workflows, and downloadable skills, aimed at professionals who don’t write code."
+      description: "Open-source Claude Code setup for non-programmers: project management, inbox and meeting workflows, and downloadable skills."
     - title: "Claude Code My Workflow"
       url: "https://github.com/pedrohcgs/claude-code-my-workflow"
       author: "Pedro Sant’Anna"
-      description: "A ready-to-fork Claude Code template for academics using LaTeX, Beamer, and R, with specialized agents, skills, multi-agent review, and replication protocols."
+      description: "Ready-to-fork Claude Code template for LaTeX, Beamer, and R projects, with specialized agents, multi-agent review, and replication protocols."
 
 video:
   label: "Video series"
@@ -35,4 +35,21 @@ video:
     - title: "Markus’ Academy"
       url: "https://bcf.princeton.edu/markus-academy/"
       author: "Princeton Bendheim Center"
-      description: "A weekly webinar series hosted by Markus Brunnermeier, featuring conversations with leading academics on critical issues facing the global economy. Paul’s video series lives here."
+      description: "Weekly webinar series hosted by Markus Brunnermeier at Princeton, with talks on finance, macro, and (increasingly) AI in economics."
+      sessions:
+        - title: "A User’s Guide to GPT and LLMs for Economics Research"
+          url: "https://bcf.princeton.edu/events/kevin-bryan-on-a-users-guide-to-gpt-and-llms-for-economics-research/"
+          speaker: "Kevin Bryan"
+          description: "Practical walkthrough of using LLMs in economics: basics, main research use cases, controlling output, and implementation fixes."
+        - title: "Modern AI for Economics Research: An Overview of Tools"
+          url: "https://bcf.princeton.edu/events/benjamin-golub-on-modern-ai-for-economics-research-an-overview-of-tools/"
+          speaker: "Benjamin Golub"
+          description: "Tutorial covering Cursor (AI-native code editing), Refine.ink (automated referee-style feedback on papers), and prompting best practices."
+        - title: "Unlocking Economic Data with LLMs"
+          url: "https://bcf.princeton.edu/events/sergio-correia-on-unlocking-economic-data-with-llms/"
+          speaker: "Sergio Correia"
+          description: "How to summarize text, extract historical data, and merge datasets with a few lines of Python, plus embeddings and RAG pipeline design."
+        - title: "Introducing AI Agents"
+          url: "https://bcf.princeton.edu/events/eduard-talamas-on-introducing-ai-agents/"
+          speaker: "Eduard Talamas"
+          description: "AI as scalable knowledge in organizations: how the degree of agent autonomy determines who gains and who loses from adoption."
