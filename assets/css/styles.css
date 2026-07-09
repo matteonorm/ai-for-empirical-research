@@ -129,15 +129,22 @@ section > h3:not(:first-of-type) {
 }
 
 .track-banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   background: #f0ede8;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0.5rem 0.75rem;
   margin-bottom: 1.25rem;
   font-size: 0.82rem;
+}
+
+.track-banner-back {
+  display: block;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.track-banner-forward {
+  display: block;
 }
 
 p, ul, ol { margin-bottom: 0.75rem; }
