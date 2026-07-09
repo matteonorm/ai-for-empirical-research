@@ -8,15 +8,18 @@ track_key: "new-to-ai"
 
 <p>{{ track.framing }}</p>
 
-{% assign setup = site.data.videos["01-setup"] %}
-### {{ setup.title }}
-
-{% include video_page.html video_key="01-setup" %}
-
-{% assign analysis = site.data.videos["02-data-analysis"] %}
-### {{ analysis.title }}
-
-{% include video_page.html video_key="02-data-analysis" %}
+<ol class="track-path">
+{% for step in track.path %}
+<li>
+  {% if step.external %}
+  <a href="{{ step.url }}" target="_blank" rel="noopener noreferrer">{{ step.title }} ↗</a>
+  {% else %}
+  <a href="{{ step.url | relative_url }}?track={{ page.track_key }}">{{ step.title }}</a>
+  {% endif %}
+  <span class="track-why">{{ step.why }}</span>
+</li>
+{% endfor %}
+</ol>
 
 {% if track.closing_before %}
 <p class="track-closing">{{ track.closing_before }}<a href="{{ '/pipeline/' | relative_url }}">the full pipeline</a>{{ track.closing_after }}</p>
