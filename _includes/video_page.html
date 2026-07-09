@@ -53,50 +53,44 @@
 </div>
 
 {% if page.video_key %}
-<script>
-(function() {
-  var defined_tracks = {{ site.data.tracks | jsonify }};
-  var params = new URLSearchParams(window.location.search);
-  var trackKey = params.get('track');
-  if (!trackKey || !defined_tracks[trackKey]) return;
-
-  var track = defined_tracks[trackKey];
-  var baseUrl = '{{ "" | relative_url }}';
-  function normPath(p) { return p.replace(/\.html$/, '').replace(/\/$/, ''); }
-  var currentPath = normPath(window.location.pathname);
-
-  var internalItems = track.path.filter(function(s) { return !s.external; });
-  var idx = -1;
-  for (var i = 0; i < internalItems.length; i++) {
-    var itemPath = normPath(baseUrl + internalItems[i].url);
-    if (itemPath === currentPath) { idx = i; break; }
-  }
-  if (idx < 0) return;
-
-  var banner = document.createElement('div');
-  banner.className = 'track-banner';
-
-  var backLink = ‘<a href="’ + baseUrl + track.url + ‘">&larr; Back to ‘ + track.title + ‘</a>’;
-  var nextPart = ‘’;
-  if (idx < internalItems.length - 1) {
-    var next = internalItems[idx + 1];
-    nextPart = ‘<a href="’ + baseUrl + next.url + ‘?track=’ + trackKey + ‘">Next in this track: ‘ + next.title + ‘ &rarr;</a>’;
-  } else if (track.next_track && defined_tracks[track.next_track]) {
-    var grad = defined_tracks[track.next_track];
-    nextPart = ‘<a href="’ + baseUrl + grad.url + ‘">You’ve got everything here! Ready to become a ‘ + grad.title + ‘ &rarr;</a>’;
-  }
-
-  banner.innerHTML = '<span>' + backLink + '</span><span>' + nextPart + '</span>';
-
-  var section = document.querySelector('section');
-  var h1 = section ? section.querySelector('h1') : null;
-  if (h1 && h1.nextSibling) {
-    h1.parentNode.insertBefore(banner, h1.nextSibling);
-  } else if (section) {
-    section.insertBefore(banner, section.firstChild);
-  }
+<div id="track-data" style="display:none" data-tracks="{{ site.data.tracks | jsonify | escape }}" data-baseurl="{{ "" | relative_url }}"></div>
+<script>{% raw %}
+;(function(){
+  var el=document.getElementById("track-data");
+  if(!el)return;
+  var defined_tracks=JSON.parse(el.getAttribute("data-tracks"));
+  var params=new URLSearchParams(window.location.search);
+  var trackKey=params.get("track");
+  if(!trackKey||!defined_tracks[trackKey])return;
+  var track=defined_tracks[trackKey];
+  var baseUrl=el.getAttribute("data-baseurl");
+  function normPath(p){return p.replace(/\.html$/,"").replace(/\/$/,"")};
+  var currentPath=normPath(window.location.pathname);
+  var internalItems=track.path.filter(function(s){return !s.external});
+  var idx=-1;
+  for(var i=0;i<internalItems.length;i++){
+    var itemPath=normPath(baseUrl+internalItems[i].url);
+    if(itemPath===currentPath){idx=i;break}
+  };
+  if(idx<0)return;
+  var banner=document.createElement("div");
+  banner.className="track-banner";
+  var backLink="<a href=\""+baseUrl+track.url+"\">&larr; Back to "+track.title+"</a>";
+  var nextPart="";
+  if(idx<internalItems.length-1){
+    var next=internalItems[idx+1];
+    nextPart="<a href=\""+baseUrl+next.url+"?track="+trackKey+"\">Next in this track: "+next.title+" &rarr;</a>";
+  }else if(track.next_track&&defined_tracks[track.next_track]){
+    var grad=defined_tracks[track.next_track];
+    nextPart="<a href=\""+baseUrl+grad.url+"\">You’ve got everything here! Ready to become a "+grad.title+" &rarr;</a>";
+  };
+  banner.innerHTML="<span>"+backLink+"</span><span>"+nextPart+"</span>";
+  var section=document.querySelector("section");
+  var h1=section?section.querySelector("h1"):null;
+  if(h1&&h1.nextSibling){h1.parentNode.insertBefore(banner,h1.nextSibling)}
+  else if(section){section.insertBefore(banner,section.firstChild)}
 })();
-</script>
+{% endraw %}</script>
 {% endif %}
 
 {% else %}
