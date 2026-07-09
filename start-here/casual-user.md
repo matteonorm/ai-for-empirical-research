@@ -12,7 +12,7 @@ track_key: "casual-user"
 {% for step in track.path %}
 <li>
   {% if step.external %}
-  <a href="{{ step.url }}">{{ step.title }}</a>
+  <a href="{{ step.url }}" target="_blank" rel="noopener noreferrer">{{ step.title }} ↗</a>
   {% else %}
   <a href="{{ step.url | relative_url }}">{{ step.title }}</a>
   {% endif %}
