@@ -25,12 +25,22 @@
       url: "https://ohmyz.sh/"
 
 02-data-analysis:
-  title: "TODO: Data Analysis with AI"
-  youtube_id: "TODO"
-  duration: "TODO"
-  description: "TODO"
-  substack_url: "TODO"
-  resources: []
+  title: "From an Empty Folder to a Figure"
+  youtube_id: "Rp17XUPxa4I"
+  duration: "37:30"
+  description: ""
+  substack_url: "https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure"
+  takeaways:
+    - "Let Claude handle data acquisition: point it at the source (Census, FRED) and let it navigate the download, rather than spending 20 minutes finding the right table yourself"
+    - "Reference style guides you like (such as Kieran Healy's data visualization work) instead of specifying individual plot parameters one at a time"
+    - "Iterate in small steps rather than writing one comprehensive specification; refine the figure incrementally"
+    - "Always generate scripts, not just outputs: the code is the reproducible artifact, not the chart"
+    - "The judgment is still yours: Claude accelerates implementation, but choosing what to plot and how to interpret it remains your job"
+  resources:
+    - title: "Kieran Healy, Data Visualization (book)"
+      url: "https://socviz.co/"
+    - title: "Census Bureau Housing Vacancies Survey"
+      url: "https://www.census.gov/housing/hvs/"
 
 03-scraping:
   title: "TODO: Web Scraping"

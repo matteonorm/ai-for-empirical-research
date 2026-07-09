@@ -21,7 +21,7 @@ Pick your track:
 ### The Pipeline
 
 - [Getting Started with Claude Code]({{ '/pipeline/01-setup' | relative_url }})
-- [Data Analysis]({{ '/pipeline/02-data-analysis' | relative_url }})
+- [From an Empty Folder to a Figure]({{ '/pipeline/02-data-analysis' | relative_url }})
 - [Web Scraping]({{ '/pipeline/03-scraping' | relative_url }})
 - [Large Datasets and Structured Databases]({{ '/pipeline/04-large-data' | relative_url }})
 - [Academic Writing]({{ '/pipeline/05-writing' | relative_url }})
