@@ -1,14 +1,38 @@
-# External resources, links, and related content.
-# Phase 2 will populate with real links to Substack, repos, etc.
+# External ecosystem: other people’s AI-for-research resources.
+# NOT Paul’s own content (that's the pipeline).
 
-- title: "TODO: Paul's Substack"
-  url: "TODO"
-  description: "TODO"
+guides:
+  label: "Guides and writing"
+  items:
+    - title: "Generative AI for Economic Research"
+      url: "https://www.genaiforecon.org/"
+      author: "Anton Korinek"
+      description: "A living companion site to Korinek’s JEL paper, covering use cases in ideation, writing, data analysis, coding, and mathematical derivations, with semi-annual updates."
+    - title: "Causal Inference Substack"
+      url: "https://causalinf.substack.com"
+      author: "Scott Cunningham"
+      description: "A Substack on causal inference and econometrics with a focus on how AI agents are transforming the way researchers work, through practical tutorials and applied research."
+    - title: "AI Econ Wiki"
+      url: "https://velikov-mihail.github.io/ai-econ-wiki/"
+      author: "Mihail Velikov"
+      description: "A curated knowledge base on AI tools and workflows for business and economic research, built from 176+ web articles and academic papers."
 
-- title: "TODO: Markus Academy Videos"
-  url: "TODO"
-  description: "TODO"
+workflows:
+  label: "Workflow systems"
+  items:
+    - title: "claudeblattman.com"
+      url: "https://claudeblattman.com"
+      author: "Chris Blattman"
+      description: "An open-source system for using Claude Code without coding: research project management, inbox and meeting workflows, and downloadable skills, aimed at professionals who don’t write code."
+    - title: "Claude Code My Workflow"
+      url: "https://github.com/pedrohcgs/claude-code-my-workflow"
+      author: "Pedro Sant’Anna"
+      description: "A ready-to-fork Claude Code template for academics using LaTeX, Beamer, and R, with specialized agents, skills, multi-agent review, and replication protocols."
 
-- title: "TODO: Example Repos"
-  url: "TODO"
-  description: "TODO"
+video:
+  label: "Video series"
+  items:
+    - title: "Markus’ Academy"
+      url: "https://bcf.princeton.edu/markus-academy/"
+      author: "Princeton Bendheim Center"
+      description: "A weekly webinar series hosted by Markus Brunnermeier, featuring conversations with leading academics on critical issues facing the global economy. Paul’s video series lives here."

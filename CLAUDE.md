@@ -21,7 +21,9 @@ contains ONLY:
 Never hand-edit timestamps, video URLs, or Substack links in a page file.
 If you need to change video metadata, edit `_data/videos.yml`.
 
-The `elsewhere.md` page renders from `_data/elsewhere.yml`.
+The `elsewhere.md` page renders from `_data/elsewhere.yml` (grouped by category;
+each group has `label` and `items`, each item has `title`, `url`, `author`,
+`description`). This is an external-ecosystem page, not Paul's own content.
 
 The `start-here/index.md` page renders tracks from `_data/tracks.yml`.
 Each track entry has `title`, `url`, and `tagline`.

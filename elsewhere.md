@@ -3,11 +3,21 @@ layout: default
 title: "Elsewhere"
 ---
 
-<div class="todo-placeholder">
-TODO: Curated links to external resources — Paul's Substack posts,
-Markus Academy videos, example GitHub repos, and other relevant materials.
-</div>
+### AI for research, beyond this site
 
-{% for item in site.data.elsewhere %}
-- **{{ item.title }}** — {{ item.description }}
+{% assign groups = "guides,workflows,video" | split: "," %}
+{% for key in groups %}
+{% assign group = site.data.elsewhere[key] %}
+
+#### {{ group.label }}
+
+<ul class="elsewhere-list">
+{% for item in group.items %}
+<li>
+  <a href="{{ item.url }}">{{ item.title }}</a> ({{ item.author }})
+  <span class="elsewhere-desc">{{ item.description }}</span>
+</li>
+{% endfor %}
+</ul>
+
 {% endfor %}

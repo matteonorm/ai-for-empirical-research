@@ -3,6 +3,15 @@ layout: default
 title: "Changelog"
 ---
 
+## 2026-07-09 — Fill Elsewhere: external ecosystem resources
+
+- Populated `_data/elsewhere.yml` with 6 verified resources in 3 categories
+  (Guides and writing, Workflow systems, Video series).
+- Rewrote `elsewhere.md` to render grouped data from the YAML file.
+- Added `.elsewhere-desc` CSS rule. Removed TODO placeholder.
+- All URLs fetched and confirmed live. Descriptions written from actual page
+  content, not from memory.
+
 ## 2026-07-09 — Restructure Start Here: router index + per-track pages
 
 - `start-here/index.md` is now a short router: heading, TODO framing paragraph,

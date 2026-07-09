@@ -127,6 +127,22 @@ All content is DRAFT, pending Paul's review. No em-dashes in any prose.
 - **patent-data** (https://github.com/paulgp/patent-data): still 404
 - All other referenced repos verified 200 as of 2026-07-09
 
+## Elsewhere page
+
+The Elsewhere page (`elsewhere.md`) is an external-ecosystem page: other
+people's AI-for-research resources, not Paul's own content (that's the
+pipeline). Data-driven from `_data/elsewhere.yml`, grouped into three
+categories (Guides and writing, Workflow systems, Video series).
+
+All six resources verified via fetch on 2026-07-09. All URLs return 200.
+No resources were left out. Descriptions are one-liners written from what
+the fetched pages actually say, not from memory.
+
+URL notes:
+- Anton Korinek: `genaiforecon.org` (not the Google Sites URL, which has a login wall)
+- Scott Cunningham: `causalinf.substack.com` (not `scottcunningham.substack.com`)
+- Markus' Academy: `bcf.princeton.edu/markus-academy/` (`markusacademy.org` does not resolve)
+
 ## Pipeline taglines
 
 The `tagline` field on each `videos.yml` entry is Matteo's editorial phrasing
