@@ -1,0 +1,176 @@
+<div class="chart-container">
+  <select id="journal-select" class="journal-select">
+    <option value="">Top economics journals (aggregate)</option>
+  </select>
+  <canvas id="econlit-chart" width="640" height="360"></canvas>
+</div>
+<div id="chart-urls" style="display:none"
+     data-trend="{{ '/assets/data/econlit-trend.csv' | relative_url }}"
+     data-journal="{{ '/assets/data/econlit-trend-by-journal.csv' | relative_url }}"></div>
+<script>{% raw %}
+;(function(){
+  var urls = document.getElementById("chart-urls");
+  if (!urls) return;
+  var trendUrl = urls.getAttribute("data-trend");
+  var journalUrl = urls.getAttribute("data-journal");
+  var canvas = document.getElementById("econlit-chart");
+  var ctx = canvas.getContext("2d");
+  var select = document.getElementById("journal-select");
+
+  var PAD = {top: 20, right: 20, bottom: 40, left: 50};
+  var RUST = "#b5451b";
+  var BG = "#faf8f5";
+  var GRID = "#e0ddd8";
+  var TEXT = "#666";
+  var FONT = "11px 'DM Sans', sans-serif";
+  var FONT_LABEL = "12px 'DM Sans', sans-serif";
+
+  var aggregateData = null;
+  var journalData = {};
+
+  function parseCSV(text) {
+    var lines = text.trim().split("\n");
+    var headers = lines[0].split(",");
+    var rows = [];
+    for (var i = 1; i < lines.length; i++) {
+      var vals = lines[i].split(",");
+      var row = {};
+      for (var j = 0; j < headers.length; j++) {
+        row[headers[j].trim()] = vals[j] ? vals[j].trim() : "";
+      }
+      rows.push(row);
+    }
+    return rows;
+  }
+
+  function drawChart(data, label) {
+    var dpr = window.devicePixelRatio || 1;
+    var w = canvas.clientWidth;
+    var h = canvas.clientHeight;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.scale(dpr, dpr);
+
+    ctx.fillStyle = BG;
+    ctx.fillRect(0, 0, w, h);
+
+    if (!data || data.length === 0) return;
+
+    var years = data.map(function(d) { return parseInt(d.Year); });
+    var vals = data.map(function(d) { return parseFloat(d["Raw Percentage"]) || 0; });
+    var xMin = Math.min.apply(null, years);
+    var xMax = Math.max.apply(null, years);
+    var yMax = Math.ceil(Math.max.apply(null, vals) * 1.2);
+    if (yMax < 1) yMax = 1;
+
+    var plotW = w - PAD.left - PAD.right;
+    var plotH = h - PAD.top - PAD.bottom;
+
+    function xPos(year) { return PAD.left + (year - xMin) / (xMax - xMin) * plotW; }
+    function yPos(val) { return PAD.top + (1 - val / yMax) * plotH; }
+
+    // grid lines
+    ctx.strokeStyle = GRID;
+    ctx.lineWidth = 0.5;
+    var yTicks = [];
+    var yStep = yMax <= 2 ? 0.5 : 1;
+    for (var yv = 0; yv <= yMax; yv += yStep) {
+      yTicks.push(yv);
+      ctx.beginPath();
+      ctx.moveTo(PAD.left, yPos(yv));
+      ctx.lineTo(w - PAD.right, yPos(yv));
+      ctx.stroke();
+    }
+
+    // axes
+    ctx.strokeStyle = "#ccc";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(PAD.left, PAD.top);
+    ctx.lineTo(PAD.left, h - PAD.bottom);
+    ctx.lineTo(w - PAD.right, h - PAD.bottom);
+    ctx.stroke();
+
+    // x labels
+    ctx.fillStyle = TEXT;
+    ctx.font = FONT;
+    ctx.textAlign = "center";
+    for (var yr = xMin; yr <= xMax; yr += 2) {
+      ctx.fillText(yr, xPos(yr), h - PAD.bottom + 16);
+    }
+    if ((xMax - xMin) % 2 !== 0) {
+      ctx.fillText(xMax, xPos(xMax), h - PAD.bottom + 16);
+    }
+
+    // y labels
+    ctx.textAlign = "right";
+    for (var ti = 0; ti < yTicks.length; ti++) {
+      var tv = yTicks[ti];
+      ctx.fillText(tv.toFixed(1) + "%", PAD.left - 6, yPos(tv) + 4);
+    }
+
+    // data line
+    ctx.strokeStyle = RUST;
+    ctx.lineWidth = 2.5;
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    for (var i = 0; i < years.length; i++) {
+      var px = xPos(years[i]);
+      var py = yPos(vals[i]);
+      if (i === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+
+    // dots
+    for (var di = 0; di < years.length; di++) {
+      ctx.beginPath();
+      ctx.arc(xPos(years[di]), yPos(vals[di]), 3, 0, Math.PI * 2);
+      ctx.fillStyle = RUST;
+      ctx.fill();
+    }
+  }
+
+  // fetch aggregate
+  fetch(trendUrl).then(function(r) { return r.text(); }).then(function(text) {
+    aggregateData = parseCSV(text);
+    drawChart(aggregateData, "Aggregate");
+  });
+
+  // fetch by-journal
+  fetch(journalUrl).then(function(r) { return r.text(); }).then(function(text) {
+    var rows = parseCSV(text);
+    var journals = [];
+    for (var i = 0; i < rows.length; i++) {
+      var j = rows[i].Journal;
+      if (!journalData[j]) {
+        journalData[j] = [];
+        journals.push(j);
+      }
+      journalData[j].push(rows[i]);
+    }
+    journals.sort();
+    for (var k = 0; k < journals.length; k++) {
+      var opt = document.createElement("option");
+      opt.value = journals[k];
+      opt.textContent = journals[k];
+      select.appendChild(opt);
+    }
+  });
+
+  select.addEventListener("change", function() {
+    var val = select.value;
+    if (!val) {
+      drawChart(aggregateData, "Aggregate");
+    } else if (journalData[val]) {
+      drawChart(journalData[val], val);
+    }
+  });
+
+  window.addEventListener("resize", function() {
+    var val = select.value;
+    if (!val) drawChart(aggregateData, "Aggregate");
+    else if (journalData[val]) drawChart(journalData[val], val);
+  });
+})();
+{% endraw %}</script>

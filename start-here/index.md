@@ -5,10 +5,13 @@ title: "Start Here"
 
 ### Pick your track
 
-<div class="todo-placeholder">
-TODO: Brief framing paragraph — what these tracks are and how to choose.
-</div>
-
-- [New to AI]({{ '/start-here/new-to-ai' | relative_url }}) — never used AI tools in research before
-- [Casual User]({{ '/start-here/casual-user' | relative_url }}) — you've used ChatGPT or similar, want to go deeper
-- [Power User]({{ '/start-here/power-user' | relative_url }}) — already comfortable, looking for advanced techniques
+{% assign slugs = "new-to-ai,casual-user,power-user" | split: "," %}
+<ul class="track-list">
+{% for slug in slugs %}
+{% assign track = site.data.tracks[slug] %}
+<li>
+  <a href="{{ track.url | relative_url }}">{{ track.title }}</a>
+  <span class="track-tagline">{{ track.tagline }}</span>
+</li>
+{% endfor %}
+</ul>

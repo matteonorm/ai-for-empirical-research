@@ -5,31 +5,16 @@ title: "AI for Empirical Research"
 
 ### A curated guide to AI tools for empirical researchers
 
-<div class="todo-placeholder">
-TODO: Landing page content. This will include a brief introduction,
-links to the "Start Here" tracks, and an overview of the pipeline sections.
-</div>
+Research runs through stages, from the first idea to the published paper. The fear is that AI replaces the researcher. What actually happens is subtler: AI compresses the timeline, shortening the distance between stages without removing the person who directs them.
 
-### Start Here
+The skills it replicates are execution skills, coding, cleaning data, drafting. The ones it does not, knowing which questions matter, developing taste for a credible design, understanding an institutional setting, have not lost value. They have gained it, because the bottleneck has moved toward them.
 
-Pick your track:
+{% include compression_diagram.html %}
 
-- [New to AI]({{ '/start-here/new-to-ai' | relative_url }})
-- [Casual User]({{ '/start-here/casual-user' | relative_url }})
-- [Power User]({{ '/start-here/power-user' | relative_url }})
+Large language models are now part of the conversation in economics. Mentions of them in the literature have climbed sharply since 2022, as the field works out where they fit, whether as an object of study, a source of data, or a tool in the research process.
 
-### The Pipeline
+{% include econlit_chart.html %}
 
-- [Setup & First Steps]({{ '/pipeline/01-setup' | relative_url }})
-- [Data Analysis]({{ '/pipeline/02-data-analysis' | relative_url }})
-- [Web Scraping]({{ '/pipeline/03-scraping' | relative_url }})
-- [Large Data & APIs]({{ '/pipeline/04-large-data' | relative_url }})
-- [Academic Writing]({{ '/pipeline/05-writing' | relative_url }})
-- [Building Skills]({{ '/pipeline/06-skills' | relative_url }})
-- [Workflow & Git]({{ '/pipeline/07-workflow-git' | relative_url }})
+<p class="chart-caption">Share of papers in top economics journals mentioning LLMs, 2011 to 2025. As of July 2026, from the <a href="https://paulgp.com/econlit-pipeline/search.html" target="_blank" rel="noopener noreferrer">econ-lit search pipeline</a>. <a href="{{ '/assets/data/econlit-papers.csv' | relative_url }}" download>Download the underlying papers.</a></p>
 
-### More
-
-- [Restricted Data]({{ '/restricted-data' | relative_url }})
-- [Elsewhere]({{ '/elsewhere' | relative_url }})
-- [Talks]({{ '/talks/nber-hf-2026' | relative_url }})
+This site is a practical guide to that shift across the research cycle, from sharpening an idea to assembling data, running the analysis, drafting the paper, and answering referees, where these tools can genuinely move the work forward. When you're ready, <a href="{{ '/start-here/' | relative_url }}">pick your track and start</a>.

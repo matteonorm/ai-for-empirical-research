@@ -69,6 +69,84 @@ section > h3:not(:first-of-type) {
   margin-bottom: 0.5rem;
 }
 
+.video-page h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-tagline,
+.track-tagline {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+
+.track-section {
+  margin-bottom: 2rem;
+}
+
+.track-why {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+
+.track-closing {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #555;
+}
+
+.elsewhere-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+
+.pipeline-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.pipeline-nav-next {
+  margin-left: auto;
+}
+
+.track-banner {
+  background: #f0ede8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.82rem;
+}
+
+.track-banner-back {
+  display: block;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.track-banner-forward {
+  display: block;
+}
+
 p, ul, ol { margin-bottom: 0.75rem; }
 li { margin: 0.5rem 0; line-height: 1.6; }
 li li { margin: 0.25rem 0; }
@@ -158,6 +236,55 @@ section { padding-right: 2rem; }
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85rem;
   margin: 1rem 0;
+}
+
+.compression-diagram {
+  margin: 1.5rem 0;
+}
+
+.compression-diagram svg {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+}
+
+.diagram-caption {
+  font-style: italic;
+  font-size: 0.88rem;
+  color: #555;
+  margin-top: 0.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.chart-container {
+  margin: 1.5rem 0;
+}
+
+.chart-container canvas {
+  width: 100%;
+  height: auto;
+}
+
+.chart-caption {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.chart-download {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.journal-select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #faf8f5;
+  display: block;
 }
 
 @media print {

@@ -1,0 +1,27 @@
+{% assign slugs = "01-setup,02-data-analysis,03-scraping,04-large-data,05-writing,06-skills,07-permissions,08-workflow-git" | split: "," %}
+{% assign current = page.video_key %}
+{% assign idx = -1 %}
+{% for slug in slugs %}
+  {% if slug == current %}
+    {% assign idx = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% if idx >= 0 %}
+<nav class="pipeline-nav">
+  {% if idx > 0 %}
+    {% assign prev_idx = idx | minus: 1 %}
+    {% assign prev_slug = slugs[prev_idx] %}
+    {% assign prev_video = site.data.videos[prev_slug] %}
+    <a href="{{ '/pipeline/' | append: prev_slug | relative_url }}" class="pipeline-nav-prev">&larr; {{ prev_video.title }}</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+  {% assign last_idx = slugs.size | minus: 1 %}
+  {% if idx < last_idx %}
+    {% assign next_idx = idx | plus: 1 %}
+    {% assign next_slug = slugs[next_idx] %}
+    {% assign next_video = site.data.videos[next_slug] %}
+    <a href="{{ '/pipeline/' | append: next_slug | relative_url }}" class="pipeline-nav-next">{{ next_video.title }} &rarr;</a>
+  {% endif %}
+</nav>
+{% endif %}
